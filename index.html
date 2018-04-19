@@ -1,5 +1,3 @@
-<script src="vue.js"></script>
-<script src="app.js"></script>
 
 <html lang="en">
 <head>
@@ -7,12 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Learning vueJS</title>
+
+    <style src="css.css"></style>
+    
 </head>
 <body>
-    <div id="app">
-        <p>{{ title }}</p>
-    </div>    
+    <form id="app" v-cloak>
+        <div class="bar">
+            <!-- Create a binding between the searchString model and the text field -->
+
+            <input type="text" v-model="searchString" placeholder="Enter your search terms" />
+        </div>
+
+        <ul>
+            <!-- Render a li element for every entry in the computed filteredArticles array. -->
+
+            <li v-for="article in filteredArticles">
+                <a v-bind:href="article.url">
+                    <img v-bind:src="article.image" />
+                </a>
+                <p>{{article.title}}</p>
+            </li>
+        </ul>
+    </form>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="app.js"></script>
+
 </html>
-
-
