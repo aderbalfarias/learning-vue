@@ -8,21 +8,9 @@
 
     <link rel="stylesheet" type="text/css" href="site.css"></link>    
 </head>
-<body>
-    <form id="app" v-cloak>
-        <div class="bar">
-            <input type="text" v-model="searchString" placeholder="Enter your search terms" />
-        </div>
-
-        <ul>
-            <li v-for="article in filteredArticles">
-                <a v-bind:href="article.url">
-                    <img v-bind:src="article.image" />
-                </a>
-                <p>{{article.title}}</p>
-            </li>
-        </ul>
-    </form>
+<body id="app">
+    <a v-bind:href="url">{{url}}</a><br>
+    <a :href="url">{{url}}</a>    
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
