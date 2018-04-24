@@ -1,5 +1,5 @@
 var data = {
-    name: 'My Tree',
+    name: 'My Tree Example',
     children: [{
             name: 'hello'
         },
@@ -71,7 +71,7 @@ Vue.component('item', {
         },
         addChild: function () {
             this.model.children.push({
-                name: 'new stuff'
+                name: 'new stuff added'
             })
         }
     }
