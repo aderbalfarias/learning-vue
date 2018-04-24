@@ -10,7 +10,13 @@
 </head>
 <body id="app">
     <a v-bind:href="url">{{url}}</a><br>
-    <a :href="url">{{url}}</a>    
+    <a :href="url">{{url}}</a>   
+    <br>
+    <div>
+        <input v-model="message" type="text">
+    </div>
+    <p> {{ message }} </p>
+    
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
