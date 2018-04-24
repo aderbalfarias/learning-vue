@@ -92,17 +92,3 @@ ul li p {
     padding-top: 12px;
     color: #6e7a7f;
 }
-
-.item {
-    cursor: pointer;
-}
-
-.bold {
-    font-weight: bold;
-}
-
-ul {
-    padding-left: 1em;
-    line-height: 1.5em;
-    list-style-type: dot;
-}
