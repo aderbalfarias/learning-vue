@@ -1,24 +1,43 @@
-
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Learning vueJS</title>
 
-    <link rel="stylesheet" type="text/css" href="site.css"></link>    
+    <link rel="stylesheet" type="text/css" href="site.css"></link>
 </head>
-<body id="app">
-    <a v-bind:href="url">{{url}}</a><br>
-    <a :href="url">{{url}}</a>   
-    <br>
-    <div>
-        <input v-model="message" type="text">
-    </div>
-    <p> {{ message }} </p>
-    
+
+<body>
+    <section id="app">
+        <div>
+            <a v-bind:href="url">{{ url }}</a>
+            <br>
+            <a :href="url">{{ url }}</a>
+            <br>
+            <div>
+                <input v-model="message" type="text">
+            </div>
+            <p> {{ message }} </p>
+        </div>
+
+        <div>
+            <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+            <label for="jack">Jack</label>
+            <input type="checkbox" id="john" value="John" v-model="checkedNames">
+            <label for="john">John</label>
+            <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+            <label for="mike">Mike</label>
+            <br>
+            <span>Checked names: {{ checkedNames }}</span>
+        </div>
+    </section>
+
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script src="app.js"></script>
+
 </html>
