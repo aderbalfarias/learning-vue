@@ -1,15 +1,15 @@
 <template>
 <div>
-    <p>I'm Posting something</p>
+    <p>I'm here</p>
 </div>
 </template>
 
 <script>
 export default {
-  name: 'Posts',
+  name: 'TestRoute',
   data () {
     return {
-        msg: 'Welcome to Your Vue.js App'
+        msg: 'Testing Route'
     }
   }
 }

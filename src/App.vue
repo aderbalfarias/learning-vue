@@ -1,20 +1,24 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <!-- <img src="./assets/logo.png"> -->
     <HelloWorld/>
-    <Posts></Posts>
+
+    <router-view></router-view>
+    
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld'
 import Posts from './components/Posts'
+import TestRoute from './components/TestRoute'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
-    Posts
+    Posts,
+    TestRoute
   }
 }
 </script>
@@ -26,6 +30,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 </style>
