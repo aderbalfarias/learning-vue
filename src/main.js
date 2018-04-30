@@ -5,9 +5,11 @@ import App from './App'
 import VueRouter from 'vue-router'
 import Posts from './components/Posts.vue'
 import TestRoute from './components/TestRoute.vue'
+import VueResource from 'vue-resource'
 
 Vue.config.productionTip = false
 
+Vue.use(VueResource);
 Vue.use(VueRouter);
 
 const routes = [
