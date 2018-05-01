@@ -6,16 +6,15 @@
 
 <script>
 export default {
-  name: 'TestRoute',
-  data () {
-    return {
-        msg: 'Testing Route'
+    name: 'TestRoute',
+    data () {
+        return {
+            msg: 'Testing Route'
+        }
     }
-  }
 }
 </script>
 
 
 <style scoped>
-
 </style>
