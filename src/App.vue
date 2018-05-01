@@ -7,14 +7,14 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import Nav from './components/Nav'
 import Posts from './components/Posts'
 import TestRoute from './components/TestRoute'
 
 export default {
     name: 'App',
     components: {
-        HelloWorld,
+        Nav,
         Posts,
         TestRoute
     }
@@ -22,12 +22,5 @@ export default {
 </script>
 
 <style>
-#app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 0;
-}
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
 </style>

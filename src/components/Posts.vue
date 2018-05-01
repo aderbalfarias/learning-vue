@@ -1,15 +1,17 @@
 <template>
 <div>
-    <p>I'm Posting something</p>
+    <p class="text-center">I'm Posting something</p>
 
-    <button class="btn btn-info" v-on:click="get">
-        Test Get
-    </button>
-    <br>
-    <br>
-    <button class="btn btn-info" v-on:click="post">
-        Test Post
-    </button>
+    <div class="text-center">
+        <button class="btn btn-info" v-on:click="get">
+            Test Get
+        </button>
+        <br>
+        <br>
+        <button class="btn btn-info" v-on:click="post">
+            Test Post
+        </button>
+    </div>
 </div>
 </template>
 
@@ -49,7 +51,6 @@ export default {
     }
 }
 </script>
-
 
 <style scoped>
 </style>

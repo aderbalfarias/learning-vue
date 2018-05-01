@@ -55,6 +55,5 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
-@import "../../node_modules/bootstrap/dist/css/bootstrap.css";
+<style scoped>
 </style>
