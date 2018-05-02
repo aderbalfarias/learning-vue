@@ -31,6 +31,12 @@
     <div>
         <button v-on:click="count++">You clicked me {{ count }} times.</button>
     </div>
+
+    <div>
+        <input type="text" class="mt-2" placeholder="testing keyup" v-on:keyup="alertMe">        
+        <input type="text" class="mt-2" placeholder="testing keyup.enter" v-on:keyup.enter="alertMe">        
+        <input type="text" class="mt-2" placeholder="testing keyup.enter.space" v-on:keyup.enter.space="alertMe">        
+    </div>
 </section>
 </template>
 
@@ -50,6 +56,11 @@ export default {
                 }
             ],
             count: 0
+        }
+    },
+    methods: {
+        alertMe: function() {
+            alert('Something happened!');
         }
     }
 }
