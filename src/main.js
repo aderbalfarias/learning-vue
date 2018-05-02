@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import VueRouter from 'vue-router'
+import Home from './components/Home.vue'
 import Posts from './components/Posts.vue'
 import Search from './components/Search.vue'
 import TestRoute from './components/TestRoute.vue'
@@ -14,6 +15,10 @@ Vue.use(VueResource);
 Vue.use(VueRouter);
 
 const routes = [
+    {
+        path: '/', component: Home
+        
+    },
     {
         path: '/posts', component: Posts
         
