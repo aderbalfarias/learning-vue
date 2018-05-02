@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import VueRouter from 'vue-router'
 import Posts from './components/Posts.vue'
+import Search from './components/Search.vue'
 import TestRoute from './components/TestRoute.vue'
 import VueResource from 'vue-resource'
 
@@ -19,6 +20,9 @@ const routes = [
     },
     {
         path: '/testroute', component: TestRoute
+    },
+    {
+        path: '/search', component: Search
     }
 ];
 
@@ -26,8 +30,8 @@ const router = new VueRouter({routes: routes});
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router: router,
-  components: { App },
-  template: '<App/>'
+    el: '#app',
+    router: router,
+    components: { App },
+    template: '<App/>'
 })
