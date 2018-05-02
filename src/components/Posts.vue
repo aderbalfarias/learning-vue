@@ -1,6 +1,6 @@
 <template>
-<div>
-    <p class="text-center">I'm Posting something</p>
+<div class="text-center">
+    <p>I'm Posting something</p>
 
     <div class="text-center">
         <button class="btn btn-info" v-on:click="get">

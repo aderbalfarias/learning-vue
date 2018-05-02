@@ -1,5 +1,5 @@
 <template>
-<form v-cloak>
+<form class="text-center" v-cloak>
     <div class="bar">
         <input type="text" v-model="searchString" placeholder="Enter your search terms" />
     </div>

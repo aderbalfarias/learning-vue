@@ -11,6 +11,7 @@ import Home from './components/Home'
 import Nav from './components/Nav'
 import Posts from './components/Posts'
 import TestRoute from './components/TestRoute'
+import Examples from './components/Examples'
 
 export default {
     name: 'App',
@@ -18,7 +19,8 @@ export default {
         Home,
         Nav,
         Posts,
-        TestRoute
+        TestRoute,
+        Examples
     }
 }
 </script>
