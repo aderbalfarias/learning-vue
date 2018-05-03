@@ -8,6 +8,7 @@ import Posts from './components/Posts.vue'
 import Search from './components/Search.vue'
 import TestRoute from './components/TestRoute.vue'
 import Examples from './components/Examples.vue'
+import Tree from './components/Tree.vue'
 import VueResource from 'vue-resource'
 
 Vue.config.productionTip = false
@@ -32,6 +33,9 @@ const routes = [
     },
     {
         path: '/examples', component: Examples
+    },
+    {
+        path: '/tree', component: Tree
     }
 ];
 

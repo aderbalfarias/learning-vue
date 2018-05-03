@@ -12,6 +12,7 @@ import Nav from './components/Nav'
 import Posts from './components/Posts'
 import TestRoute from './components/TestRoute'
 import Examples from './components/Examples'
+import Tree from './components/Tree'
 
 export default {
     name: 'App',
@@ -20,7 +21,8 @@ export default {
         Nav,
         Posts,
         TestRoute,
-        Examples
+        Examples,
+        Tree
     }
 }
 </script>
