@@ -37,6 +37,14 @@
         <input type="text" class="mt-2" placeholder="testing keyup.enter" v-on:keyup.enter="alertMe">        
         <input type="text" class="mt-2" placeholder="testing keyup.enter.space" v-on:keyup.enter.space="alertMe">        
     </div>
+
+    <div id="watch-example">
+    <p>
+        Ask a yes/no question:
+        <input v-model="question">
+    </p>
+    <p>{{ answer }}</p>
+    </div>
 </section>
 </template>
 
@@ -55,14 +63,25 @@ export default {
                     message: 'Bar'
                 }
             ],
-            count: 0
+            count: 0,
+            question: '',
+            answer: 'I cannot give you an answer until you ask a question!'
         }
     },
     methods: {
         alertMe: function() {
             alert('Something happened!');
         }
+    },
+    watch: {
+    question: function (newQuestion, oldQuestion) {
+      this.answer = 'Waiting for you to stop typing...'
+      this.debouncedGetAnswer()
     }
+  },
+  created: function () {
+    this.debouncedGetAnswer = _.debounce(this.getAnswer, 500)
+  },
 }
 </script>
 
