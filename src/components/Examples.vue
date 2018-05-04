@@ -41,6 +41,11 @@
     <div>
         <button @click="counter++">You clicked me {{ counter }} times.</button>
     </div>
+
+    <div id="example">
+        <p>Original message: "{{ message }}"</p>
+        <p>Computed reversed message: "{{ reversedMessage }}"</p>
+    </div>
 </section>
 </template>
 
@@ -50,7 +55,7 @@ export default {
     data() {
         return {
             url: 'http://aderbalfarias.com.br/',
-            message: '',
+            message: 'ex',
             checkedNames: [],
             items: [{
                     message: 'Foo'
@@ -70,7 +75,12 @@ export default {
     },
     watch: {
         counter: function() {
-            console.log('The counter has changed!')
+            console.log('The counter has changed!');
+        }
+    },
+    computed: {
+        reversedMessage: function () {
+            return this.message.split('').reverse().join('');
         }
     }
 }
