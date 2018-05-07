@@ -2,7 +2,7 @@
   "name": "learningvue",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "Aderbal Farias <aderbalfarias@hotmail.com>",
+  "author": "Aderbal Farias <aderbalfarias@hotmail.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
