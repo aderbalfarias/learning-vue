@@ -81,7 +81,7 @@ export default {
             ],
             count: 0,
             counter: 0,
-            type: 'H'
+            type: 'B'
         }
     },
     methods: {
