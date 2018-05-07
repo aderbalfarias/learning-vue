@@ -61,6 +61,8 @@
         <p>Not A/B/C</p>
     </div>
 
+    <p v-show="ok">Olá!</p>
+
 </section>
 </template>
 
@@ -81,7 +83,8 @@ export default {
             ],
             count: 0,
             counter: 0,
-            type: 'B'
+            type: 'B',
+            ok: false
         }
     },
     methods: {
