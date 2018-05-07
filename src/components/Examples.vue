@@ -10,7 +10,7 @@
         </div>
         <p> {{ message }} </p>
     </div>
-
+ 
     <div>
         <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
         <label for="jack">Jack</label>
@@ -46,6 +46,21 @@
         <p>Original message: "{{ message }}"</p>
         <p>Computed reversed message: "{{ reversedMessage }}"</p>
     </div>
+
+
+    <div v-if="type === 'A'">
+        <p>A</p>
+    </div>
+    <div v-else-if="type === 'B'">
+        <p>B</p>
+    </div>
+    <div v-else-if="type === 'C'">
+        <p>C</p>
+    </div>
+    <div v-else>
+        <p>Not A/B/C</p>
+    </div>
+
 </section>
 </template>
 
@@ -65,7 +80,8 @@ export default {
                 }
             ],
             count: 0,
-            counter: 0
+            counter: 0,
+            type: 'H'
         }
     },
     methods: {
