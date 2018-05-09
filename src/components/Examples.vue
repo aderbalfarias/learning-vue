@@ -85,7 +85,7 @@ export default {
             counter: 0,
             type: 'B',
             ok: false,
-            test: 9
+            test: 0
         }
     },
     methods: {
