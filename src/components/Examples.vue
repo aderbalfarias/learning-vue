@@ -79,7 +79,13 @@
         <option>C</option>
     </select>
     <span>Selected: {{ selected }}</span>
-
+    <br>
+    <select v-model="selected1">
+        <option v-for="option in options" v-bind:value="option.value" :key="option.value">
+            {{ option.text }}
+        </option>
+    </select>
+    <span>Selected: {{ selected1 }}</span>
 </section>
 </template>
 
@@ -104,8 +110,13 @@ export default {
             ok: false,
             test: 1,
             picked: '',
-            selected: ''
-
+            selected: '',
+            selected1: 'A',
+            options: [
+                { text: 'One', value: 'A' },
+                { text: 'Two', value: 'B' },
+                { text: 'Three', value: 'C' }
+            ]
         }
     },
     methods: {
