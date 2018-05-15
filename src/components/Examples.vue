@@ -63,6 +63,13 @@
 
     <p v-show="ok">Olá!</p>
 
+    <input type="radio" id="one" value="One" v-model="picked">
+    <label for="one">One</label>
+    <br>
+    <input type="radio" id="two" value="Two" v-model="picked">
+    <label for="two">Two</label>
+    <br>
+    <span>Picked: {{ picked }}</span>
 </section>
 </template>
 
@@ -85,7 +92,9 @@ export default {
             counter: 0,
             type: 'B',
             ok: false,
-            test: 1
+            test: 1,
+            picked: ''
+
         }
     },
     methods: {
