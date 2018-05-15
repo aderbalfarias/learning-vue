@@ -86,6 +86,16 @@
         </option>
     </select>
     <span>Selected: {{ selected1 }}</span>
+    <br>
+    <select v-model="selected2" multiple>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+    </select>
+    <br>
+    <span>Selected: {{ selected2 }}</span>
+
+
 </section>
 </template>
 
@@ -116,7 +126,8 @@ export default {
                 { text: 'One', value: 'A' },
                 { text: 'Two', value: 'B' },
                 { text: 'Three', value: 'C' }
-            ]
+            ],
+            selected2: ''            
         }
     },
     methods: {
