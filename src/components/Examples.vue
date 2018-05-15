@@ -70,6 +70,16 @@
     <label for="two">Two</label>
     <br>
     <span>Picked: {{ picked }}</span>
+    <br>
+
+    <select v-model="selected">
+        <option disabled value="">Please select one</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+    </select>
+    <span>Selected: {{ selected }}</span>
+
 </section>
 </template>
 
@@ -93,7 +103,8 @@ export default {
             type: 'B',
             ok: false,
             test: 1,
-            picked: ''
+            picked: '',
+            selected: ''
 
         }
     },
