@@ -127,7 +127,7 @@ export default {
                 { text: 'Two', value: 'B' },
                 { text: 'Three', value: 'C' }
             ],
-            selected2: ''            
+            selected2: []           
         }
     },
     methods: {
