@@ -40,7 +40,7 @@
     <section class="row log" v-if="turns.length > 0">
         <div class="col-md-12 columns">
             <ul>
-                <li v-for="turn in turns" :key="turn"
+                <li v-for="(turn, i) in turns" :key="i"
                     :class="{'player-turn': turn.isPlayer, 'monster-turn': !turn.isPlayer}">
                     {{ turn.text }} 
                 </li>
@@ -107,6 +107,7 @@ export default {
         },
         giveUp: function () {
             this.gameIsRunning = false;
+            this.turns = [];
         },
         monsterAttacks: function() {
             var damage = this.calculateDamage(5, 12);
