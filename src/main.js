@@ -9,6 +9,7 @@ import Search from './components/Search.vue'
 import TestRoute from './components/TestRoute.vue'
 import Examples from './components/Examples.vue'
 import Tree from './components/Tree.vue'
+import Game from './components/Game.vue'
 import VueResource from 'vue-resource'
 
 Vue.config.productionTip = false
@@ -36,6 +37,9 @@ const routes = [
     },
     {
         path: '/tree', component: Tree
+    },
+    {
+        path: '/game', component: Game
     }
 ];
 

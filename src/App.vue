@@ -13,6 +13,7 @@ import Posts from './components/Posts'
 import TestRoute from './components/TestRoute'
 import Examples from './components/Examples'
 import Tree from './components/Tree'
+import Game from './components/Game'
 
 export default {
     name: 'App',
@@ -22,7 +23,8 @@ export default {
         Posts,
         TestRoute,
         Examples,
-        Tree
+        Tree,
+        Game
     }
 }
 </script>

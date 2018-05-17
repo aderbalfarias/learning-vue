@@ -23,6 +23,9 @@
             <li class="nav-item">
                 <router-link class="nav-link" :to="'/examples'">Examples</router-link>
             </li>
+            <li class="nav-item">
+                <router-link class="nav-link" :to="'/game'">Game</router-link>
+            </li>
             <!-- <li class="nav-item">
                 <router-link class="nav-link" :to="'/tree'">Tree</router-link>
             </li> -->
