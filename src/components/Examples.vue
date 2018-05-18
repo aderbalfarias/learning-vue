@@ -95,6 +95,11 @@
     <br>
     <span>Selected: {{ selected2 }}</span>
 
+    <p>
+        <button @click="showRefs" ref="myRef">
+            Ref example
+        </button>
+    </p>
 
 </section>
 </template>
@@ -133,6 +138,10 @@ export default {
     methods: {
         alertMe: function() {
             alert('Something happened!');
+        },
+        showRefs: function(){
+            console.log(this.$refs.myRef);
+            this.$refs.myRef.innerText = "Ref changed";
         }
     },
     watch: {
