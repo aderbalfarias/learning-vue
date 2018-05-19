@@ -100,7 +100,7 @@
             Ref example
         </button>
     </p>
-
+    <input v-focus>
 </section>
 </template>
 
@@ -152,6 +152,14 @@ export default {
     computed: {
         reversedMessage: function () {
             return this.message.split('').reverse().join('');
+        }
+    },
+    directives: {
+        focus: {
+            // directive definition
+            inserted: function (el) {
+                el.focus()
+            }
         }
     }
 }

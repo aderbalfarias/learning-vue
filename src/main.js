@@ -45,6 +45,13 @@ const routes = [
 
 const router = new VueRouter({routes: routes});
 
+
+Vue.directive('focus', {
+    inserted: function (el) {
+        el.focus()
+    }
+})
+
 /* eslint-disable no-new */
 new Vue({
     el: '#app',
@@ -52,3 +59,4 @@ new Vue({
     components: { App },
     template: '<App/>'
 })
+
