@@ -101,6 +101,12 @@
         </button>
     </p>
     <input v-focus>
+
+    <div>
+        <p>{{ titleTest }}</p>
+        <button @click="titleTest = 'Title changed'">Update Title</button>
+        <button @click="destroy">Destroy</button>
+    </div>
 </section>
 </template>
 
@@ -132,7 +138,8 @@ export default {
                 { text: 'Two', value: 'B' },
                 { text: 'Three', value: 'C' }
             ],
-            selected2: []           
+            selected2: [],
+            titleTest: 'Testing'         
         }
     },
     methods: {
@@ -142,6 +149,9 @@ export default {
         showRefs: function(){
             console.log(this.$refs.myRef);
             this.$refs.myRef.innerText = "Ref changed";
+        },
+        destroy: function() {
+            this.$destroy();
         }
     },
     watch: {
@@ -161,6 +171,30 @@ export default {
                 el.focus()
             }
         }
+    },
+    beforeCreate: function() {
+        console.log("beforeCreate()")
+    },
+    created: function() {
+        console.log("create()")
+    },
+    beforeMount: function() {
+        console.log("beforeMount()")
+    },
+    mounted: function() {
+        console.log("mounted()")
+    },
+    beforeUpdate: function() {
+        console.log("beforeUpdate()")
+    },
+    updated: function() {
+        console.log("updated()")
+    },
+    beforeDestroy: function() {
+        console.log("beforeDestroy()")
+    },
+    destroyed: function() {
+        console.log("destroyed()")
     }
 }
 </script>
