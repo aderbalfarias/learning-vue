@@ -95,12 +95,14 @@
     <br>
     <span>Selected: {{ selected2 }}</span>
 
-    <p>
-        <button @click="showRefs" ref="myRef">
-            Ref example
-        </button>
-    </p>
-    <input v-focus>
+    <div>
+        <p>
+            <button @click="showRefs" ref="myRef">
+                Ref example
+            </button>
+        </p>
+        <input v-focus>
+    </div>
 
     <div>
         <p>{{ titleTest }}</p>
