@@ -14,6 +14,7 @@ import TestRoute from './components/TestRoute'
 import Examples from './components/Examples'
 import Tree from './components/Tree'
 import Game from './components/Game'
+import Dreams from './components/Dreams'
 
 export default {
     name: 'App',
@@ -24,7 +25,8 @@ export default {
         TestRoute,
         Examples,
         Tree,
-        Game
+        Game,
+        Dreams
     }
 }
 </script>
