@@ -15,6 +15,7 @@ import Examples from './components/Examples'
 import Tree from './components/Tree'
 import Game from './components/Game'
 import Dreams from './components/Dreams'
+import Multiple from './components/Multiple'
 
 export default {
     name: 'App',
@@ -26,7 +27,8 @@ export default {
         Examples,
         Tree,
         Game,
-        Dreams
+        Dreams,
+        Multiple
     }
 }
 </script>

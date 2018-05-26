@@ -11,6 +11,7 @@ import Examples from './components/Examples.vue'
 import Tree from './components/Tree.vue'
 import Game from './components/Game.vue'
 import Dreams from './components/Dreams.vue'
+import Multiple from './components/Multiple.vue'
 import VueResource from 'vue-resource'
 
 Vue.config.productionTip = false
@@ -43,7 +44,10 @@ const routes = [
         path: '/game', component: Game
     },
     {
-        path: '/Dreams', component: Dreams
+        path: '/dreams', component: Dreams
+    },
+    {
+        path: '/multiple', component: Multiple
     }
 ];
 
