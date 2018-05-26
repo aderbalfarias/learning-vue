@@ -2,7 +2,7 @@
     <section class="container">
         <app-posts></app-posts>
         <hr>
-        <app-search></app-search>
+        <appSearch></appSearch>
     </section>        
 </template>
 
@@ -12,7 +12,7 @@ import Search  from './Search';
 export default {
     components: {
         'app-posts': Posts,
-        'app-search': Search,
+        appSearch: Search, // it works as well without quotation marks
     },
     name: 'Multiple',
     data() {
