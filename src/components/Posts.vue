@@ -1,18 +1,18 @@
 <template>
-<div class="text-center">
-    <p>I'm Posting something</p>
-
     <div class="text-center">
-        <button class="btn btn-info" v-on:click="get">
-            Test Get
-        </button>
-        <br>
-        <br>
-        <button class="btn btn-info" v-on:click="post">
-            Test Post
-        </button>
+        <p>I'm Posting something</p>
+
+        <div class="text-center">
+            <button class="btn btn-info" v-on:click="get">
+                Test Get
+            </button>
+            <br>
+            <br>
+            <button class="btn btn-info" v-on:click="post">
+                Test Post
+            </button>
+        </div>
     </div>
-</div>
 </template>
 
 <script>

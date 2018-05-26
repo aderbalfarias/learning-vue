@@ -1,7 +1,7 @@
 <template>
-<div>
-    <p>I'm here</p>
-</div>
+    <div>
+        <p>I'm here</p>
+    </div>
 </template>
 
 <script>

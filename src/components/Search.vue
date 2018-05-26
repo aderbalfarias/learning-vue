@@ -1,18 +1,18 @@
 <template>
-<form class="text-center" v-cloak>
-    <div class="bar">
-        <input type="text" v-model="searchString" placeholder="Enter your search terms" />
-    </div>
+    <form class="text-center" v-cloak>
+        <div class="bar">
+            <input type="text" v-model="searchString" placeholder="Enter your search terms" />
+        </div>
 
-    <ul>
-        <li v-for="article in filteredArticles" :key="article.url">
-            <a v-bind:href="article.url">
-                <img v-bind:src="article.image" />
-            </a>
-            <p>{{article.title}}</p>
-        </li>
-    </ul>
-</form>
+        <ul>
+            <li v-for="article in filteredArticles" :key="article.url">
+                <a v-bind:href="article.url">
+                    <img v-bind:src="article.image" />
+                </a>
+                <p>{{article.title}}</p>
+            </li>
+        </ul>
+    </form>
 </template>
 
 <script>
