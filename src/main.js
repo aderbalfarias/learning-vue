@@ -9,7 +9,7 @@ import Home from './components/Home/Home.vue';
 import Posts from './components/Post/Posts.vue';
 import Search from './components/Search/Search.vue';
 import TestRoute from './components/Example/TestRoute.vue';
-import Examples from './components/Example/Basic.vue';
+import BasicExamples from './components/Example/Basic.vue';
 import Tree from './components/Tree/Tree.vue';
 import Game from './components/Game/Game.vue';
 import Dreams from './components/Dream/Dreams.vue';
@@ -24,11 +24,9 @@ Vue.use(VueRouter);
 const routes = [
     {
         path: '/', component: Home
-        
     },
     {
         path: '/posts', component: Posts
-        
     },
     {
         path: '/testroute', component: TestRoute
@@ -37,7 +35,7 @@ const routes = [
         path: '/search', component: Search
     },
     {
-        path: '/examples', component: Examples
+        path: '/basicexamples', component: BasicExamples
     },
     {
         path: '/tree', component: Tree

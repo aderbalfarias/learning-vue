@@ -11,7 +11,7 @@
     import Nav from './components/Shared/Nav';
     import Posts from './components/Post/Posts';
     import TestRoute from './components/Example/TestRoute';
-    import Examples from './components/Example/Basic';
+    import BasicExamples from './components/Example/Basic';
     import Tree from './components/Tree/Tree';
     import Game from './components/Game/Game';
     import Dreams from './components/Dream/Dreams';
@@ -25,7 +25,7 @@
             Nav,
             Posts,
             TestRoute,
-            Examples,
+            BasicExamples,
             Tree,
             Game,
             Dreams,
