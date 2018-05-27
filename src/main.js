@@ -5,15 +5,15 @@ import App from './App';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
 
-import Home from './components/Home.vue';
-import Posts from './components/Posts.vue';
-import Search from './components/Search.vue';
-import TestRoute from './components/TestRoute.vue';
-import Examples from './components/Examples.vue';
-import Tree from './components/Tree.vue';
-import Game from './components/Game.vue';
-import Dreams from './components/Dreams.vue';
-import Multiple from './components/Multiple.vue';
+import Home from './components/Home/Home.vue';
+import Posts from './components/Post/Posts.vue';
+import Search from './components/Search/Search.vue';
+import TestRoute from './components/Example/TestRoute.vue';
+import Examples from './components/Example/Basic.vue';
+import Tree from './components/Tree/Tree.vue';
+import Game from './components/Game/Game.vue';
+import Dreams from './components/Dream/Dreams.vue';
+import Multiple from './components/Example/Multiple.vue';
 import User from './components/User/User.vue';
 
 Vue.config.productionTip = false

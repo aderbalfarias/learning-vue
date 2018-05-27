@@ -113,92 +113,92 @@
 </template>
 
 <script>
-export default {
-    name: 'Examples',
-    data() {
-        return {
-            url: 'http://aderbalfarias.com.br/',
-            message: 'ex',
-            checkedNames: [],
-            items: [{
-                    message: 'Foo'
-                },
-                {
-                    message: 'Bar'
-                }
-            ],
-            count: 0,
-            counter: 0,
-            type: 'B',
-            ok: false,
-            test: 1,
-            picked: '',
-            selected: '',
-            selected1: 'A',
-            options: [
-                { text: 'One', value: 'A' },
-                { text: 'Two', value: 'B' },
-                { text: 'Three', value: 'C' }
-            ],
-            selected2: [],
-            titleTest: 'Testing'         
-        }
-    },
-    methods: {
-        alertMe: function() {
-            alert('Something happened!');
-        },
-        showRefs: function(){
-            console.log(this.$refs.myRef);
-            this.$refs.myRef.innerText = "Ref changed";
-        },
-        destroy: function() {
-            this.$destroy();
-        }
-    },
-    watch: {
-        counter: function() {
-            console.log('The counter has changed!');
-        }
-    },
-    computed: {
-        reversedMessage: function () {
-            return this.message.split('').reverse().join('');
-        }
-    },
-    directives: {
-        focus: {
-            // directive definition
-            inserted: function (el) {
-                el.focus()
+    export default {
+        name: 'Basic',
+        data() {
+            return {
+                url: 'http://aderbalfarias.com.br/',
+                message: 'ex',
+                checkedNames: [],
+                items: [{
+                        message: 'Foo'
+                    },
+                    {
+                        message: 'Bar'
+                    }
+                ],
+                count: 0,
+                counter: 0,
+                type: 'B',
+                ok: false,
+                test: 1,
+                picked: '',
+                selected: '',
+                selected1: 'A',
+                options: [
+                    { text: 'One', value: 'A' },
+                    { text: 'Two', value: 'B' },
+                    { text: 'Three', value: 'C' }
+                ],
+                selected2: [],
+                titleTest: 'Testing'         
             }
+        },
+        methods: {
+            alertMe: function() {
+                alert('Something happened!');
+            },
+            showRefs: function(){
+                console.log(this.$refs.myRef);
+                this.$refs.myRef.innerText = "Ref changed";
+            },
+            destroy: function() {
+                this.$destroy();
+            }
+        },
+        watch: {
+            counter: function() {
+                console.log('The counter has changed!');
+            }
+        },
+        computed: {
+            reversedMessage: function () {
+                return this.message.split('').reverse().join('');
+            }
+        },
+        directives: {
+            focus: {
+                // directive definition
+                inserted: function (el) {
+                    el.focus();
+                }
+            }
+        },
+        beforeCreate: function() {
+            console.log("beforeCreate()");
+        },
+        created: function() {
+            console.log("create()");
+        },
+        beforeMount: function() {
+            console.log("beforeMount()");
+        },
+        mounted: function() {
+            console.log("mounted()");
+        },
+        beforeUpdate: function() {
+            console.log("beforeUpdate()");
+        },
+        updated: function() {
+            console.log("updated()");
+        },
+        beforeDestroy: function() {
+            console.log("beforeDestroy()");
+        },
+        destroyed: function() {
+            console.log("destroyed()");
         }
-    },
-    beforeCreate: function() {
-        console.log("beforeCreate()")
-    },
-    created: function() {
-        console.log("create()")
-    },
-    beforeMount: function() {
-        console.log("beforeMount()")
-    },
-    mounted: function() {
-        console.log("mounted()")
-    },
-    beforeUpdate: function() {
-        console.log("beforeUpdate()")
-    },
-    updated: function() {
-        console.log("updated()")
-    },
-    beforeDestroy: function() {
-        console.log("beforeDestroy()")
-    },
-    destroyed: function() {
-        console.log("destroyed()")
     }
-}
 </script>
 
 <style scoped>

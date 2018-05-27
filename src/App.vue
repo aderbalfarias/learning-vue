@@ -7,15 +7,15 @@
 </template>
 
 <script>
-    import Home from './components/Home';
-    import Nav from './components/Nav';
-    import Posts from './components/Posts';
-    import TestRoute from './components/TestRoute';
-    import Examples from './components/Examples';
-    import Tree from './components/Tree';
-    import Game from './components/Game';
-    import Dreams from './components/Dreams';
-    import Multiple from './components/Multiple';
+    import Home from './components/Home/Home';
+    import Nav from './components/Shared/Nav';
+    import Posts from './components/Post/Posts';
+    import TestRoute from './components/Example/TestRoute';
+    import Examples from './components/Example/Basic';
+    import Tree from './components/Tree/Tree';
+    import Game from './components/Game/Game';
+    import Dreams from './components/Dream/Dreams';
+    import Multiple from './components/Example/Multiple';
     import User from './components/User/User';
 
     export default {
