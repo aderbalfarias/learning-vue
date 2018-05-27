@@ -16,7 +16,7 @@ import Dreams from './components/Dream/Dreams.vue';
 import Multiple from './components/Example/Multiple.vue';
 import User from './components/User/User.vue';
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 Vue.use(VueResource);
 Vue.use(VueRouter);
@@ -58,9 +58,11 @@ const router = new VueRouter({routes: routes});
 
 Vue.directive('focus', {
     inserted: function (el) {
-        el.focus()
+        el.focus();
     }
-})
+});
+
+export const eventBus = new Vue();
 
 /* eslint-disable no-new */
 new Vue({
@@ -68,6 +70,4 @@ new Vue({
     router: router,
     components: { App },
     template: '<App/>'
-})
-
-export const eventBus = new Vue();
+});
