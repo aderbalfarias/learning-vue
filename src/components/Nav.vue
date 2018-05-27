@@ -32,6 +32,9 @@
                 <li class="nav-item">
                     <router-link class="nav-link" :to="'/multiple'">Multiple</router-link>
                 </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" :to="'/user'">Users</router-link>
+                </li>
                 <!-- <li class="nav-item">
                     <router-link class="nav-link" :to="'/tree'">Tree</router-link>
                 </li> -->
@@ -60,14 +63,14 @@
 </template>
 
 <script>
-export default {
-    name: "Nav",
-    data() {
-        return {
-            msg: "Welcome to Your Vue.js App"
-        };
-    }
-};
+    export default {
+        name: "Nav",
+        data() {
+            return {
+                msg: "Welcome to Your Vue.js App"
+            };
+        }
+    };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

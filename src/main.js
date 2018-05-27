@@ -1,18 +1,20 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue'
-import App from './App'
-import VueRouter from 'vue-router'
-import Home from './components/Home.vue'
-import Posts from './components/Posts.vue'
-import Search from './components/Search.vue'
-import TestRoute from './components/TestRoute.vue'
-import Examples from './components/Examples.vue'
-import Tree from './components/Tree.vue'
-import Game from './components/Game.vue'
-import Dreams from './components/Dreams.vue'
-import Multiple from './components/Multiple.vue'
-import VueResource from 'vue-resource'
+import Vue from 'vue';
+import App from './App';
+import VueRouter from 'vue-router';
+import VueResource from 'vue-resource';
+
+import Home from './components/Home.vue';
+import Posts from './components/Posts.vue';
+import Search from './components/Search.vue';
+import TestRoute from './components/TestRoute.vue';
+import Examples from './components/Examples.vue';
+import Tree from './components/Tree.vue';
+import Game from './components/Game.vue';
+import Dreams from './components/Dreams.vue';
+import Multiple from './components/Multiple.vue';
+import User from './components/User/User.vue';
 
 Vue.config.productionTip = false
 
@@ -48,11 +50,13 @@ const routes = [
     },
     {
         path: '/multiple', component: Multiple
+    },
+    {
+        path: '/user', component: User
     }
 ];
 
 const router = new VueRouter({routes: routes});
-
 
 Vue.directive('focus', {
     inserted: function (el) {
