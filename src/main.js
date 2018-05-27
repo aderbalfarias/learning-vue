@@ -70,3 +70,4 @@ new Vue({
     template: '<App/>'
 })
 
+export const eventBus = new Vue();

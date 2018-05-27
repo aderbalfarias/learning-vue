@@ -1,6 +1,6 @@
 <template>
     <div class="component">
-        <h3>You may view the User Details here</h3>
+        <h3>User Details</h3>
         <p>Many Details</p>
         <p>User Name: {{ switchName() }}</p>
         <p>User Age: {{ userAge }}</p>
@@ -10,7 +10,7 @@
 </template>
 
 <script>
-    import { eventBus } from '../main';
+    import { eventBus } from '../../main';
 
     export default {
         props: {

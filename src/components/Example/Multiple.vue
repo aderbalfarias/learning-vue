@@ -7,8 +7,8 @@
 </template>
 
 <script>
-    import Posts  from './Post/Posts';
-    import Search  from './Search/Search';
+    import Posts  from '../Post/Posts';
+    import Search  from '../Search/Search';
 
     export default {
         components: {
