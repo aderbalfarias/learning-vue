@@ -13,6 +13,8 @@
                     @nameWasReset="name = $event"
                     :resetFn="resetName"
                     :userAge="age">
+                    <h2>Testing slot</h2>
+                    <p>It works</p>
                 </app-user-detail>
             </div>
             <div class="col-xs-12 col-sm-6">

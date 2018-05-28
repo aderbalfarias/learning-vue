@@ -6,6 +6,8 @@
         <p>User Age: {{ userAge }}</p>
         <button @click="resetName">Reset Name</button>
         <button @click="resetFn()">Reset Name</button>
+
+        <slot></slot>
     </div>
 </template>
 
