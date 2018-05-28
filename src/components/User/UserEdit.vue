@@ -10,12 +10,14 @@
     import {eventBus} from '../../main';
 
     export default {
-        props: ['userAge'],
+        props: {
+            userAge: Number,            
+        },
         methods: {
             editAge() {
                 this.userAge = 20;
-                // this.$emit('ageWasEdited', this.userAge);
-                eventBus.$emit('ageWasEdited', this.userAge);
+                this.$emit('ageWasEdited', this.userAge);
+                // eventBus.$emit('ageWasEdited', this.userAge);
                 // eventBus.changeAge(this.userAge);
             }
         }
