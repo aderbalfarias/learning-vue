@@ -22,9 +22,9 @@
 </template>
 
 <script>
-    import Quote from './components/Quote.vue';
-    import Author from './components/Author.vue';
-    import New from './components/New.vue';
+    import Quote from '../../components/Dynamic/Quote.vue';
+    import Author from '../../components/Dynamic/Author.vue';
+    import New from '../../components/Dynamic/New.vue';
 
     export default {
         name: 'Dynamic',

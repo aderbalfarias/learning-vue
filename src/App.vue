@@ -17,6 +17,7 @@
     import Dreams from './components/Dream/Dreams';
     import Multiple from './components/Example/Multiple';
     import User from './components/User/User';
+    import Dynamic from './components/Dynamic/Dynamic';
 
     export default {
         name: 'App',
@@ -30,7 +31,8 @@
             Game,
             Dreams,
             Multiple,
-            User
+            User,
+            Dynamic
         }
     }
 </script>
