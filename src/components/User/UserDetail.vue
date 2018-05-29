@@ -7,6 +7,8 @@
         <button @click="resetName">Reset Name</button>
         <button @click="resetFn()">Reset Name</button>
 
+        <slot name="first"></slot>
+        <hr>
         <slot></slot>
     </div>
 </template>
