@@ -17,6 +17,7 @@
     import Header from './Header.vue';
 
     export default {
+        name: "Quote",
         data: function () {
             return {
                 quotes: [

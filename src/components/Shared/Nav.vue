@@ -38,6 +38,9 @@
                 <li class="nav-item">
                     <router-link class="nav-link" :to="'/dynamic'">Dynamic</router-link>
                 </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" :to="'/quote'">Quote</router-link>
+                </li>
                 <!-- <li class="nav-item">
                     <router-link class="nav-link" :to="'/tree'">Tree</router-link>
                 </li> -->

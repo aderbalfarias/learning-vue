@@ -15,7 +15,8 @@ import Game from './components/Game/Game.vue';
 import Dreams from './components/Dream/Dreams.vue';
 import Multiple from './components/Example/Multiple.vue';
 import User from './components/User/User.vue';
-import Dynamic from './components/Dynamic/Dynamic.vue'
+import Dynamic from './components/Dynamic/Dynamic.vue';
+import Quote from './components/Quote/Index.vue';
 
 Vue.config.productionTip = false;
 
@@ -55,6 +56,9 @@ const routes = [
     },
     {
         path: '/dynamic', component: Dynamic
+    },
+    {
+        path: '/quote', component: Quote
     }
 ];
 

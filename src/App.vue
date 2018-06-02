@@ -18,6 +18,7 @@
     import Multiple from './components/Example/Multiple';
     import User from './components/User/User';
     import Dynamic from './components/Dynamic/Dynamic';
+    import Quote from './components/Quote/Index';
 
     export default {
         name: 'App',
@@ -32,7 +33,8 @@
             Dreams,
             Multiple,
             User,
-            Dynamic
+            Dynamic,
+            Quote
         }
     }
 </script>
