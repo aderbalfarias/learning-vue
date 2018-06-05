@@ -1,5 +1,8 @@
 <template>
-    <div></div>
+    <div class="text-center">
+        <h2>Hey Git, I ♡ you (no matter who bought it)!</h2>
+        <h2>However, I ♡ you too Microsoft 😊</h2>
+    </div>
 </template>
 
 <script>
@@ -7,6 +10,7 @@
         name: "Home",
         data() {
             return {
+                message: ''
             };
         }
     };
