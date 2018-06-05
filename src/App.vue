@@ -19,7 +19,7 @@
     import User from './components/User/User';
     import Dynamic from './components/Dynamic/Dynamic';
     import Quote from './components/Quote/Index';
-    import Form from './components/Form/Form';
+    import Form from './components/Form/Index';
 
     export default {
         name: 'App',
