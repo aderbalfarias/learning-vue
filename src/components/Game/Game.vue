@@ -1,6 +1,6 @@
 <template>
     <div>
-    <section class="row text-center">
+        <section class="row text-center">
             <div class="col-md-6 columns">
                 <h1 class="text-center">YOU</h1>
                 <div class="healthbar">

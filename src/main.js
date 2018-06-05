@@ -17,6 +17,7 @@ import Multiple from './components/Example/Multiple.vue';
 import User from './components/User/User.vue';
 import Dynamic from './components/Dynamic/Dynamic.vue';
 import Quote from './components/Quote/Index.vue';
+import Form from './components/Form/Index.vue';
 
 Vue.config.productionTip = false;
 
@@ -59,6 +60,9 @@ const routes = [
     },
     {
         path: '/quote', component: Quote
+    },
+    {
+        path: '/form', component: Form
     }
 ];
 

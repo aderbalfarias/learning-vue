@@ -19,6 +19,7 @@
     import User from './components/User/User';
     import Dynamic from './components/Dynamic/Dynamic';
     import Quote from './components/Quote/Index';
+    import Form from './components/Form/Form';
 
     export default {
         name: 'App',
@@ -34,7 +35,8 @@
             Multiple,
             User,
             Dynamic,
-            Quote
+            Quote,
+            Form
         }
     }
 </script>
