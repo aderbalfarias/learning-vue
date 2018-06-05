@@ -1,5 +1,5 @@
 <template>
-    <div class="component">
+    <div class="container">
         <h1>The User Component</h1>
         <p>I'm an awesome User!</p>
         <button @click="changeName">Change my Name</button>

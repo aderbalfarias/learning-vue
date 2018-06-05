@@ -2,7 +2,7 @@
     <div id="app">
         <!-- <img src="./assets/logo.png"> -->
         <Nav/>
-        <router-view class="container"></router-view>
+        <router-view></router-view>
     </div>
 </template>
 

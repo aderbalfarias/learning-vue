@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <section class="row text-center">
+    <div class="container">
+        <section class="text-center">
             <h1>am I here?</h1>
         </section>
     </div>
