@@ -1,6 +1,6 @@
 <template>
     <section class="text-center">
-        <div>
+        <div v-backgroundcolor="'blue'">
             <a v-bind:href="url">{{ url }}</a>
             <br>
             <a :href="url">{{ url }}</a>
