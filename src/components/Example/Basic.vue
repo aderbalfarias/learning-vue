@@ -1,5 +1,5 @@
 <template>
-    <section class="text-center">
+    <section class="container text-center">
         <div v-backgroundcolor="'grey'">
             <a v-bind:href="url">{{ url }}</a>
             <br>
@@ -117,6 +117,10 @@
             <button @click="titleTest = 'Title changed'">Update Title</button>
             <button @click="destroy">Destroy</button>
         </div>
+        <div>
+            <p>{{ testingFilters | toUpperCase }}</p>
+        </div>
+
     </section>
 </template>
 
@@ -149,7 +153,8 @@
                     { text: 'Three', value: 'C' }
                 ],
                 selected2: [],
-                titleTest: 'Testing'         
+                titleTest: 'Testing', 
+                testingFilters: 'What can I do?'        
             }
         },
         methods: {
@@ -213,6 +218,11 @@
                         }, delay);
                     }
                 }
+            }
+        },
+        filters: {
+            toUpperCase(value) {
+                return value.toUpperCase();
             }
         },
         beforeCreate: function() {
