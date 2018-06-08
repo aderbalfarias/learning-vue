@@ -15,9 +15,6 @@
                     <router-link class="nav-link" :to="'/posts'">Posts</router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link class="nav-link" :to="'/testroute'">Route</router-link>
-                </li>
-                <li class="nav-item">
                     <router-link class="nav-link" :to="'/search'">Search</router-link>
                 </li>
                 <li class="nav-item">
@@ -53,8 +50,7 @@
                         Dropdown
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
+                        <router-link class="dropdown-item" :to="'/testroute'">Route</router-link>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Something else here</a>
                     </div>
