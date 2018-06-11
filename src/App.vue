@@ -20,6 +20,7 @@
     import Dynamic from './components/Dynamic/Dynamic';
     import Quote from './components/Quote/Index';
     import Form from './components/Form/Index';
+    import FilterAndMixin from './components/FilterAndMixin/Index';
 
     export default {
         name: 'App',
@@ -36,7 +37,8 @@
             User,
             Dynamic,
             Quote,
-            Form
+            Form,
+            FilterAndMixin
         }
     }
 </script>

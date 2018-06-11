@@ -18,6 +18,7 @@ import User from './components/User/User.vue';
 import Dynamic from './components/Dynamic/Dynamic.vue';
 import Quote from './components/Quote/Index.vue';
 import Form from './components/Form/Index.vue';
+import FilterAndMixin from './components/FilterAndMixin/Index.vue';
 
 Vue.config.productionTip = false;
 
@@ -43,6 +44,22 @@ Vue.directive('directest', {
                 el.style.color = binding.value;
             }
         }, delay);
+    }
+});
+
+Vue.directive('focus', {
+    inserted: function (el) {
+        el.focus();
+    }
+});
+
+Vue.filter('to-lowercase', function(value) {
+    return value.toLowerCase();
+});
+
+Vue.mixin({
+    created() {
+        console.log('Global Mixin - Created Hook');
     }
 });
 
@@ -85,16 +102,13 @@ const routes = [
     },
     {
         path: '/form', component: Form
+    },
+    {
+        path: '/filtermixin', component: FilterAndMixin
     }
 ];
 
 const router = new VueRouter({routes: routes});
-
-Vue.directive('focus', {
-    inserted: function (el) {
-        el.focus();
-    }
-});
 
 export const eventBus = new Vue();
 

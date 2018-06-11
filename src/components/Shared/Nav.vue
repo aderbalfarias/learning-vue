@@ -41,6 +41,9 @@
                 <li class="nav-item">
                     <router-link class="nav-link" :to="'/form'">Form</router-link>
                 </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" :to="'/filtermixin'">F and M</router-link>
+                </li>
                 <!-- <li class="nav-item">
                     <router-link class="nav-link" :to="'/tree'">Tree</router-link>
                 </li> -->
