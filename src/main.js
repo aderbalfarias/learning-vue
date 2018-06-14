@@ -19,6 +19,7 @@ import Dynamic from './components/Dynamic/Dynamic.vue';
 import Quote from './components/Quote/Index.vue';
 import Form from './components/Form/Index.vue';
 import FilterAndMixin from './components/FilterAndMixin/Index.vue';
+import Style from './components/Style/Index.vue';
 
 Vue.config.productionTip = false;
 
@@ -105,6 +106,9 @@ const routes = [
     },
     {
         path: '/filtermixin', component: FilterAndMixin
+    },
+    {
+        path: '/style', component: Style
     }
 ];
 

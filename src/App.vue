@@ -21,6 +21,7 @@
     import Quote from './components/Quote/Index';
     import Form from './components/Form/Index';
     import FilterAndMixin from './components/FilterAndMixin/Index';
+    import Style from './components/Style/Index';
 
     export default {
         name: 'App',
@@ -38,7 +39,8 @@
             Dynamic,
             Quote,
             Form,
-            FilterAndMixin
+            FilterAndMixin,
+            Style
         }
     }
 </script>
