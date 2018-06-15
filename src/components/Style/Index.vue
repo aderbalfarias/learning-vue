@@ -1,10 +1,5 @@
 <template>
     <div class="container">
-        <transition-group name="fadeLeft" tag="ul">
-            <li v-for="item in items" v-bind:key="item">
-                {{ item }}
-            </li>
-        </transition-group>
     </div>
 </template>
 
