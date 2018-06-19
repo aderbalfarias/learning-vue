@@ -168,7 +168,7 @@
     }
 </script>
 
-<style>
+<style scoped>
     .fade-enter {
         opacity: 0;
     }
@@ -177,9 +177,9 @@
         transition: opacity 1s;
     }
 
-    .fade-leave {
-        /*opacity: 1;*/
-    }
+    /* .fade-leave {
+        opacity: 1;
+    } */
 
     .fade-leave-active {
         transition: opacity 1s;
@@ -196,9 +196,9 @@
         transition: opacity .5s;
     }
 
-    .slide-leave {
+    /* .slide-leave {
 
-    }
+    } */
 
     .slide-leave-active {
         animation: slide-out 1s ease-out forwards;
