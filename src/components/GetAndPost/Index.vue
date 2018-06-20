@@ -13,7 +13,7 @@
                 </div>
                 <button class="btn btn-primary" @click="submit">Submit</button>
                 <hr>
-                <input class="form-control" type="text" v-model="node">
+                <!-- <input class="form-control" type="text" v-model="node"> -->
                 <br><br>
                 <button class="btn btn-primary" @click="fetchData">Get Data</button>
                 <br><br>
@@ -34,11 +34,34 @@
                     email: ''
                 },
                 users: [],
-                resource: {},
-                node: 'data'
+                // resource: {},
+                // node: 'data'
             };
         },
         methods: {
+            submit() {
+               this.$http.post('https://vuedb-92a60.firebaseio.com/data.json', this.user)
+                    .then(response => {
+                        console.log(response);
+                    }, error => {
+                        console.log(error);
+                    });
+                // this.resource.save({}, this.user);
+                // this.resource.saveAlt(this.user);
+            },
+            fetchData() {
+                this.$http.get('https://vuedb-92a60.firebaseio.com/data.json')
+                    .then(response => {
+                        return response.json();
+                    })
+                    .then(data => {
+                        const resultArray = [];
+                        for (let key in data) {
+                            resultArray.push(data[key]);
+                        }
+                        this.users = resultArray;
+                    });
+            }
         }
     }
 </script>
