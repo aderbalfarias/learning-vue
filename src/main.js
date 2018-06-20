@@ -20,6 +20,7 @@ import Quote from './components/Quote/Index.vue';
 import Form from './components/Form/Index.vue';
 import FilterAndMixin from './components/FilterAndMixin/Index.vue';
 import Style from './components/Style/Index.vue';
+import GetAndPost from './components/GetAndPost/Index.vue';
 
 Vue.config.productionTip = false;
 
@@ -109,6 +110,9 @@ const routes = [
     },
     {
         path: '/style', component: Style
+    },
+    {
+        path: '/getandpost', component: GetAndPost
     }
 ];
 

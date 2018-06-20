@@ -22,6 +22,7 @@
     import Form from './components/Form/Index';
     import FilterAndMixin from './components/FilterAndMixin/Index';
     import Style from './components/Style/Index';
+    import GetAndPost from './components/GetAndPost/Index';
 
     export default {
         name: 'App',
@@ -40,7 +41,8 @@
             Quote,
             Form,
             FilterAndMixin,
-            Style
+            Style,
+            GetAndPost
         }
     }
 </script>

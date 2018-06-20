@@ -47,6 +47,9 @@
                 <li class="nav-item">
                     <router-link class="nav-link" :to="'/style'">Style</router-link>
                 </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" :to="'/getandpost'">G and P</router-link>
+                </li>
                 <!-- <li class="nav-item">
                     <router-link class="nav-link" :to="'/tree'">Tree</router-link>
                 </li> -->
