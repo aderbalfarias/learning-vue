@@ -1,6 +1,6 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <router-link class="navbar-brand" :to="'/'">Navbar</router-link>
+        <router-link class="navbar-brand" to="/">Navbar</router-link>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -8,58 +8,28 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <router-link class="nav-link" :to="'/'">Home</router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link class="nav-link" :to="'/posts'">Posts</router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link class="nav-link" :to="'/search'">Search</router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link class="nav-link" :to="'/basicexamples'">Basic Examples</router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link class="nav-link" :to="'/game'">Game</router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link class="nav-link" :to="'/dreams'">Dreams</router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link class="nav-link" :to="'/multiple'">Multiple</router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link class="nav-link" :to="'/user'">Users</router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link class="nav-link" :to="'/dynamic'">Dynamic</router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link class="nav-link" :to="'/quote'">Quote</router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link class="nav-link" :to="'/form'">Form</router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link class="nav-link" :to="'/filtermixin'">F and M</router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link class="nav-link" :to="'/style'">Style</router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link class="nav-link" :to="'/getandpost'">G and P</router-link>
-                </li>
-                <!-- <li class="nav-item">
-                    <router-link class="nav-link" :to="'/tree'">Tree</router-link>
-                </li> -->
+                <router-link class="nav-item" tag="li" to="/"><a class="nav-link">Home</a></router-link>
+                <router-link class="nav-item" tag="li" to="/posts"><a class="nav-link">Posts</a></router-link>
+                <router-link class="nav-item" tag="li" to="/search"><a class="nav-link">Search</a></router-link>
+                <router-link class="nav-item" tag="li" to="/basicexamples"><a class="nav-link">Basic Examples</a></router-link>
+                <router-link class="nav-item" tag="li" to="/game"><a class="nav-link">Game</a></router-link>
+                <router-link class="nav-item" tag="li" to="/dreams"><a class="nav-link">Dreams</a></router-link>
+                <router-link class="nav-item" tag="li" to="/multiple"><a class="nav-link">Multiple</a></router-link>
+                <router-link class="nav-item" tag="li" to="/user"><a class="nav-link">Users</a></router-link>
+                <router-link class="nav-item" tag="li" to="/dynamic"><a class="nav-link">Dynamic</a></router-link>
+                <router-link class="nav-item" tag="li" to="/quote"><a class="nav-link">Quote</a></router-link>
+                <router-link class="nav-item" tag="li" to="/form"><a class="nav-link">Form</a></router-link>
+                <router-link class="nav-item" tag="li" to="/filtermixin"><a class="nav-link">F and M</a></router-link>
+                <router-link class="nav-item" tag="li" to="/style"><a class="nav-link">Style</a></router-link>
+                <router-link class="nav-item" tag="li" to="/getandpost"><a class="nav-link">G and P</a></router-link>
+                <!-- <router-link class="nav-item" tag="li" to="/tree"><a class="nav-link">Tree</a></router-link> -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                         Dropdown
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <router-link class="dropdown-item" :to="'/testroute'">Route</router-link>
+                        <router-link class="dropdown-item" to="/testroute">Route</router-link>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Something else here</a>
                     </div>

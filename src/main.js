@@ -57,6 +57,5 @@ export const eventBus = new Vue();
 new Vue({
     el: '#app',
     router: router,
-    components: { App },
-    template: '<App/>'
+    render: h => h(App)
 });
