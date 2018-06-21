@@ -169,6 +169,8 @@
 </script>
 
 <style scoped>
+    @import "../../../node_modules/animate.css/animate.css";
+    
     .fade-enter {
         opacity: 0;
     }
