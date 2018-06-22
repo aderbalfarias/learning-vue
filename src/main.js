@@ -49,7 +49,10 @@ Vue.filter('to-lowercase', function(value) {
 //     }
 // });
 
-const router = new VueRouter({routes: routes});
+const router = new VueRouter({
+    routes: routes, 
+    mode: 'history'
+});
 
 export const eventBus = new Vue();
 
