@@ -83,7 +83,16 @@ export const routes = [
         }, 
         children: [
             { path: '', component: LearnStart, name: 'learnStart' },
-            { path: ':id', component: LearnDetail },
+            { 
+                path: ':id', 
+                component: LearnDetail,
+                beforeEnter: (to, from, next) => {
+                    console.log('inside route setup');
+                    next(); //it allow to continue the normal execution
+                    //next(false); //it will abort
+                    //next({}); //path to redirect
+                }
+            },
             { path: ':id/edit', component: LearnEdit, name: 'learnEdit' }
         ] 
     },
