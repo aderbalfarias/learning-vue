@@ -35,6 +35,13 @@
                     hash: '#myid'
                 }
             }
+        },
+        beforeRouteEnter (to, from, next) {
+            if (true) { //it will always be executed, it's just a example
+                next();
+            } else {
+                next(false);
+            }
         }
     }
 </script>
