@@ -17,7 +17,7 @@ import GetAndPost from './components/GetAndPost/Index.vue';
 
 export const routes = [
     {
-        path: '', component: Home
+        path: '', component: Home, name: 'home'
     },
     {
         path: '/posts', component: Posts
