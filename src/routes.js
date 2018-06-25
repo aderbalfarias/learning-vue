@@ -14,10 +14,21 @@ import Form from './components/Form/Index.vue';
 import FilterAndMixin from './components/FilterAndMixin/Index.vue';
 import Style from './components/Style/Index.vue';
 import GetAndPost from './components/GetAndPost/Index.vue';
+// import Nav from './components/Shared/Nav.vue';
+import Learn from './components/Learn/Learn.vue';
+import LearnStart from './components/Learn/LearnStart.vue';
+import LearnDetail from './components/Learn/LearnDetail.vue';
+import LearnEdit from './components/Learn/LearnEdit.vue';
 
 export const routes = [
     {
-        path: '', component: Home, name: 'home'
+        path: '', 
+        component: Home, 
+        name: 'home',
+        comments: {
+            default: Home,
+            // 'header-top': Nav
+        }
     },
     {
         path: '/posts', component: Posts
@@ -63,6 +74,21 @@ export const routes = [
     },
     {
         path: '/getandpost', component: GetAndPost
+    },
+    { 
+        path: '/learn', 
+        components: {
+            default: Learn,
+            //'header-bottom': Nav
+        }, 
+        children: [
+            { path: '', component: LearnStart },
+            { path: ':id', component: LearnDetail },
+            { path: ':id/edit', component: LearnEdit, name: 'learnEdit' }
+        ] 
+    },
+    {   
+        path: '/redirect-me', redirect: { name: 'home' } 
     },
     {   path: '*', redirect: '/' }
 ];
