@@ -82,7 +82,7 @@ export const routes = [
             //'header-bottom': Nav
         }, 
         children: [
-            { path: '', component: LearnStart },
+            { path: '', component: LearnStart, name: 'learnStart' },
             { path: ':id', component: LearnDetail },
             { path: ':id/edit', component: LearnEdit, name: 'learnEdit' }
         ] 

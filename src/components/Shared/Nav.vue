@@ -22,6 +22,7 @@
                 <router-link class="nav-item" tag="li" to="/filtermixin"><a class="nav-link">F and M</a></router-link>
                 <router-link class="nav-item" tag="li" to="/style"><a class="nav-link">Style</a></router-link>
                 <router-link class="nav-item" tag="li" to="/getandpost"><a class="nav-link">G and P</a></router-link>
+                <router-link class="nav-item" tag="li" to="/learn"><a class="nav-link">Learn</a></router-link>
                 <!-- <router-link class="nav-item" tag="li" to="/tree"><a class="nav-link">Tree</a></router-link> -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
