@@ -13,12 +13,42 @@ import Quote from './components/Quote/Index.vue';
 import Form from './components/Form/Index.vue';
 import FilterAndMixin from './components/FilterAndMixin/Index.vue';
 import Style from './components/Style/Index.vue';
-import GetAndPost from './components/GetAndPost/Index.vue';
 // import Nav from './components/Shared/Nav.vue';
-import Learn from './components/Learn/Learn.vue';
-import LearnStart from './components/Learn/LearnStart.vue';
-import LearnDetail from './components/Learn/LearnDetail.vue';
-import LearnEdit from './components/Learn/LearnEdit.vue';
+// import Learn from './components/Learn/Learn.vue';
+// import LearnStart from './components/Learn/LearnStart.vue';
+// import LearnDetail from './components/Learn/LearnDetail.vue';
+// import LearnEdit from './components/Learn/LearnEdit.vue';
+//import GetAndPost from './components/GetAndPost/Index.vue';
+
+const Learn = resolve => {
+    require.ensure(['./components/Learn/Learn.vue'], () => {
+        resolve(require('./components/Learn/Learn.vue'));
+    }, 'learn');
+};
+
+const LearnStart = resolve => {
+    require.ensure(['./components/Learn/LearnStart.vue'], () => {
+        resolve(require('./components/Learn/LearnStart.vue'));
+    }, 'learn');
+};
+
+const LearnEdit = resolve => {
+    require.ensure(['./components/Learn/LearnEdit.vue'], () => {
+        resolve(require('./components/Learn/LearnEdit.vue'));
+    }, 'learn');
+};
+
+const LearnDetail = resolve => {
+    require.ensure(['./components/Learn/LearnDetail.vue'], () => {
+        resolve(require('./components/Learn/LearnDetail.vue'));
+    }, 'learn');
+};
+
+const GetAndPost = resolve => {
+    require.ensure(['./components/GetAndPost/Index.vue'], () => {
+        resolve(require('./components/GetAndPost/Index.vue'));
+    });
+};
 
 export const routes = [
     {
