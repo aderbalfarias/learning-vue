@@ -144,5 +144,5 @@
 </script>
 
 <style scoped>
-    @import "./game.css";
+    @import './game.css';
 </style>

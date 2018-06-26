@@ -80,5 +80,5 @@
 </script>
 
 <style scoped>
-    @import "../search.css";
+    @import './search.css';
 </style>

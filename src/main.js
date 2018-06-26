@@ -4,7 +4,8 @@ import Vue from 'vue';
 import App from './App';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
-import {routes} from './routes';
+import { routes } from './routes';
+import { store } from './store/store';
 
 Vue.config.productionTip = false;
 
@@ -76,5 +77,6 @@ export const eventBus = new Vue();
 new Vue({
     el: '#app',
     router: router,
+    store: store,
     render: h => h(App)
 });
