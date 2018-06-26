@@ -6,7 +6,7 @@
                 <app-result></app-result>
                 <app-another-result></app-another-result>
                 <hr>
-                <app-counter></app-counter>
+                <app-counter class="pb-1"></app-counter>
                 <app-another-counter></app-another-counter>
                 <hr>
                 <input type="text" v-model="value">

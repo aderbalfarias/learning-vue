@@ -23,8 +23,9 @@
                 <router-link class="nav-item" tag="li" to="/style"><a class="nav-link">Style</a></router-link>
                 <router-link class="nav-item" tag="li" to="/getandpost"><a class="nav-link">G and P</a></router-link>
                 <router-link class="nav-item" tag="li" to="/learn"><a class="nav-link">Learn</a></router-link>
+                <router-link class="nav-item" tag="li" to="/vuex"><a class="nav-link">Vuex</a></router-link>
                 <!-- <router-link class="nav-item" tag="li" to="/tree"><a class="nav-link">Tree</a></router-link> -->
-                <li class="nav-item dropdown">
+                <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                         Dropdown
@@ -37,7 +38,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
+                </li> -->
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

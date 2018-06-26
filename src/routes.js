@@ -136,6 +136,12 @@ const LearnDetail = resolve => {
     }, 'learn');
 };
 
+const VuexExample = resolve => {
+    require.ensure(['./components/VuexExample/Index.vue'], () => {
+        resolve(require('./components/VuexExample/Index.vue'));
+    }, 'vuexex');
+};
+
 export const routes = [
     {
         path: '', 
@@ -211,6 +217,9 @@ export const routes = [
             },
             { path: ':id/edit', component: LearnEdit, name: 'learnEdit' }
         ] 
+    },
+    {
+        path: '/vuex', component: VuexExample
     },
     {   
         path: '/redirect-me', redirect: { name: 'home' } 
