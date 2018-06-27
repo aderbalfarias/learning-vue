@@ -31,6 +31,7 @@
 
 <script>
     import { mapActions } from 'vuex';
+    import * as types from '../../store/types';
 
     export default {
         props: ['stock'],
@@ -46,7 +47,7 @@
         },
         methods: {
             ...mapActions({
-                placeSellOrder: 'sellStock'
+                placeSellOrder: types.SELL_STOCK
             }),
             sellStock() {
                 const order = {

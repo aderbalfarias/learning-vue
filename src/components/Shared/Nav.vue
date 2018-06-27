@@ -27,8 +27,8 @@
                 <!-- <router-link class="nav-item" tag="li" to="/tree"><a class="nav-link">Tree</a></router-link> -->
                 <li 
                     class="nav-item dropdown" 
-                    :class="{ show: isDropdownOpen }"
-                    @click="isDropdownOpen = !isDropdownOpen">
+                    :class="{ show: isMarketOpen }"
+                    @click="isMarketOpen = !isMarketOpen">
                         <a class="nav-link dropdown-toggle" 
                             href="#" 
                             id="navbarDropdown" 
@@ -40,7 +40,7 @@
                         </a>
                     <div 
                         class="dropdown-menu" 
-                        :class="{ show: isDropdownOpen }"
+                        :class="{ show: isMarketOpen }"
                         aria-labelledby="navbarDropdown">
                             <router-link class="dropdown-item" to="/market">Trader</router-link>
                             <div class="dropdown-divider"></div>
@@ -68,32 +68,7 @@
         data() {
             return {
                 msg: "Welcome to Your Vue.js App",
-                isDropdownOpen: false
-            }
-        },
-        computed: {
-            funds() {
-                return this.$store.getters.funds;
-            }
-        },
-        methods: {
-            ...mapActions({
-                randomizeStocks: 'randomizeStocks',
-                fetchData: 'loadData'
-            }),
-            endDay() {
-                this.randomizeStocks();
-            },
-            saveData() {
-                const data = {
-                    funds: this.$store.getters.funds,
-                    stockPortfolio: this.$store.getters.stockPortfolio,
-                    stocks: this.$store.getters.stocks
-                };
-                this.$http.put('market.json', data);
-            },
-            loadData() {
-                this.fetchData();
+                isMarketOpen: false
             }
         }
     }

@@ -34,13 +34,13 @@ const mutations = {
 };
 
 const actions = {
-    sellStock({commit}, order) {
+    [types.SELL_STOCK]: ({commit}, order) => {
         commit(types.MUTATE_SELL_STOCK, order);
     }
 };
 
 const getters = {
-    stockPortfolio (state, getters) {
+    [types.STOCK_PORTFOLIO]: (state, getters) => {
         return state.stocks.map(stock => {
             const record = getters.stocks.find(element => element.id == stock.id);
             return {
@@ -51,7 +51,7 @@ const getters = {
             }
         });
     },
-    funds (state) {
+    [types.FUNDS]: (state) => {
         return state.funds;
     }
 };

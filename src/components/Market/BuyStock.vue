@@ -40,7 +40,7 @@
         },
         computed: {
             funds() {
-                return this.$store.getters.funds;
+                return this.$store.getters[types.FUNDS];
             },
             insufficientFunds() {
                 return this.quantity * this.stock.price > this.funds;
@@ -53,7 +53,7 @@
                     stockPrice: this.stock.price,
                     quantity: this.quantity
                 };
-                this.$store.dispatch(types.ACTION_BUY_STOCKS, order);
+                this.$store.dispatch(types.BUY_STOCKS, order);
                 this.quantity = 0;
             }
         }

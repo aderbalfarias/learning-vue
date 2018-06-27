@@ -6,6 +6,7 @@
 
 <script>
     import BuyStock from './BuyStock.vue';
+    import * as types from '../../store/types';
 
     export default {
         components: {
@@ -13,7 +14,7 @@
         },
         computed: {
             stocks() {
-                return this.$store.getters.stocks;
+                return this.$store.getters[types.STOCKS];
             }
         }
     }

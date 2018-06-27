@@ -16,7 +16,7 @@
 </template>
 
 <script>
-    import { mapActions } from 'vuex';
+    import {mapActions} from 'vuex';
     import * as types from '../../store/types';
 
     export default {
@@ -25,17 +25,16 @@
           }
         },
         created() {
-            //verify
-            this.$store.dispatch(types.ACTION_INIT_STOCKS);
+            this.$store.dispatch(types.INIT_STOCKS);
         },
         computed: {
             funds() {
-                return this.$store.getters.funds;
+                return this.$store.getters[types.FUNDS];
             }
         },
         methods: {
             ...mapActions({
-                randomizeStocks: types.ACTION_RANDOMIZE_STOCKS,
+                randomizeStocks: types.RANDOMIZE_STOCKS,
                 fetchData: types.MARKET_LOAD_DATA
             }),
             endDay() {
@@ -43,9 +42,9 @@
             },
             saveData() {
                 const data = {
-                    funds: this.$store.getters.funds,
-                    stockPortfolio: this.$store.getters.stockPortfolio,
-                    stocks: this.$store.getters.stocks
+                    funds: this.$store.getters[types.FUNDS],
+                    stockPortfolio: this.$store.getters[types.STOCK_PORTFOLIO],
+                    stocks: this.$store.getters[types.STOCKS]
                 };
                 this.$http.put('market.json', data);
             },
