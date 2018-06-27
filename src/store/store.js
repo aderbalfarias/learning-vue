@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import counter from './modules/counter';
+import portfolio from './modules/portfolio';
+import stocks from './modules/stocks';
 
 import actions from './actions';
 import getters from './getters';
@@ -17,7 +19,7 @@ export const store = new Vuex.Store({
     actions,
     modules: {
         counter,
-        portifolio,
-        stock
+        portfolio: portfolio,
+        stocks: stocks
     }
 });

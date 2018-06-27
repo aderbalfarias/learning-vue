@@ -12,6 +12,8 @@ Vue.config.productionTip = false;
 Vue.use(VueResource);
 Vue.use(VueRouter);
 
+Vue.http.options.root = 'https://vuedb-92a60.firebaseio.com/';
+
 Vue.directive('backgroundcolor', { 
     bind(el, binding, vnode) {
         el.style.backgroundColor = binding.value;
@@ -42,6 +44,10 @@ Vue.directive('focus', {
 
 Vue.filter('to-lowercase', function(value) {
     return value.toLowerCase();
+});
+
+Vue.filter('currency', (value) => {
+    return '$' + value.toLocaleString();
 });
 
 // Vue.mixin({

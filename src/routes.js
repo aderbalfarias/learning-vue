@@ -142,6 +142,24 @@ const VuexExample = resolve => {
     }, 'vuexex');
 };
 
+const Market = resolve => {
+    require.ensure(['./components/Market/Index.vue'], () => {
+        resolve(require('./components/Market/Index.vue'));
+    }, 'market');
+};
+
+const Stocks = resolve => {
+    require.ensure(['./components/Market/Stocks.vue'], () => {
+        resolve(require('./components/Market/Stocks.vue'));
+    }, 'market');
+};
+
+const Portfolio = resolve => {
+    require.ensure(['./components/Market/Portfolio.vue'], () => {
+        resolve(require('./components/Market/Portfolio.vue'));
+    }, 'market');
+};
+
 export const routes = [
     {
         path: '', 
@@ -220,6 +238,15 @@ export const routes = [
     },
     {
         path: '/vuex', component: VuexExample
+    },
+    {
+        path: '/market', component: Market
+    },
+    {
+        path: '/stocks', component: Stocks
+    },
+    {
+        path: '/portfolio', component: Portfolio
     },
     {   
         path: '/redirect-me', redirect: { name: 'home' } 

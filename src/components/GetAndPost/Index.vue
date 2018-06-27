@@ -26,6 +26,8 @@
 </template>
 
 <script>
+    import Vue from 'vue';
+
     export default {
         data() {
             return {
@@ -40,7 +42,8 @@
         },
         methods: {
             submit() {
-               this.$http.post('https://vuedb-92a60.firebaseio.com/data.json', this.user)
+               //this.$http.post('https://vuedb-92a60.firebaseio.com/data.json', this.user)
+                Vue.http.post('data.json', this.user)
                     .then(response => {
                         console.log(response);
                     }, error => {
@@ -50,7 +53,8 @@
                 // this.resource.saveAlt(this.user);
             },
             fetchData() {
-                this.$http.get('https://vuedb-92a60.firebaseio.com/data.json')
+                //this.$http.get('https://vuedb-92a60.firebaseio.com/data.json')
+                Vue.http.get('data.json')
                     .then(response => {
                         return response.json();
                     })

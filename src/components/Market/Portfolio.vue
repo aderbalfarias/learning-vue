@@ -5,7 +5,7 @@
 </template>
 
 <script>
-    import {mapGetters} from 'vuex';
+    import { mapGetters } from 'vuex';
     import SellStock from './SellStock.vue';
 
     export default {

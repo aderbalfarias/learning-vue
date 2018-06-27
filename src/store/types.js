@@ -7,11 +7,11 @@ export const VALUE = 'shared/VALUE';
 export const MUTATE_INCREMENT_COUNTER = 'counter/MUTATE_INCREMENT_COUNTER';
 export const MUTATE_DECREMENT_COUNTER = 'counter/MUTATE_DECREMENT_COUNTER';
 export const MUTATE_UPDATE_VALUE = 'shared/MUTATE_UPDATE_VALUE';
-export const MUTATE_SET_STOCKS = 'stock/SET_STOCKS';
-export const MUTATE_RND_STOCKS = 'stock/RND_STOCKS';
-export const MUTATE_BUY_STOCK = 'stock/BUY_STOCK';
-export const MUTATE_SELL_STOCK = 'stock/SELL_STOCK';
-export const MUTATE_SET_PORTFOLIO = 'portifolio/SET_PORTFOLIO';
+export const MUTATE_SET_STOCKS = 'stocks/SET_STOCKS';
+export const MUTATE_RND_STOCKS = 'stocks/RND_STOCKS';
+export const MUTATE_BUY_STOCK = 'stocks/BUY_STOCK';
+export const MUTATE_SELL_STOCK = 'stocks/SELL_STOCK';
+export const MUTATE_SET_PORTFOLIO = 'portfolio/SET_PORTFOLIO';
 
 // Actions
 export const COUNTER_INCREMENT = 'counter/COUNTER_INCREMENT';
