@@ -16,7 +16,8 @@
 </template>
 
 <script>
-    import {mapActions} from 'vuex';
+    import { mapActions } from 'vuex';
+    import * as types from '../../store/types';
 
     export default {
         data() {
@@ -25,7 +26,7 @@
         },
         created() {
             //verify
-            this.$store.dispatch('initStocks');
+            this.$store.dispatch(types.ACTION_INIT_STOCKS);
         },
         computed: {
             funds() {
@@ -34,8 +35,8 @@
         },
         methods: {
             ...mapActions({
-                randomizeStocks: 'randomizeStocks',
-                fetchData: 'loadData'
+                randomizeStocks: types.ACTION_RANDOMIZE_STOCKS,
+                fetchData: types.MARKET_LOAD_DATA
             }),
             endDay() {
                 this.randomizeStocks();

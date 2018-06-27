@@ -17,19 +17,19 @@ const mutations = {
 };
 
 const actions = {
-    buyStock: ({commit}, order) => {
+    [types.ACTION_BUY_STOCKS]: ({commit}, order) => {
         commit(types.MUTATE_BUY_STOCK, order);
     },
-    initStocks: ({commit}) => {
+    [types.ACTION_INIT_STOCKS]: ({commit}) => {
         commit(types.MUTATE_SET_STOCKS, stocks);
     },
-    randomizeStocks: ({commit}) => {
+    [types.ACTION_RANDOMIZE_STOCKS]: ({commit}) => {
         commit(types.MUTATE_RND_STOCKS);
     }
 };
 
 const getters = {
-    stocks: state => {
+    [types.STOCKS]: state => {
         return state.stocks;
     }
 };

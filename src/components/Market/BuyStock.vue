@@ -1,14 +1,12 @@
 <template>
     <div class="col-sm-6 col-md-4">
-        <div class="panel panel-success">
-            <div class="panel-heading">
-                <h3 class="panel-title">
-                    {{ stock.name }}
-                    <small>(Price: {{ stock.price }})</small>
-                </h3>
+        <div class="card text-center">
+            <div class="card-header">
+                {{ stock.name }}                    
             </div>
-            <div class="panel-body">
-                <div class="pull-left">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <div class="card-text">
                     <input
                         type="number"
                         class="form-control"
@@ -16,20 +14,23 @@
                         v-model="quantity"
                         :class="{'border-danger': insufficientFunds}">
                 </div>
-                <div class="pull-right">
-                    <button
-                        class="btn btn-success"
-                        @click="buyStock"
-                        :disabled="insufficientFunds || quantity <= 0 || !Number.isInteger(quantity)">
-                            {{ insufficientFunds ? 'Insufficient Funds' : 'Buy' }}
-                    </button>
-                </div>
+                <button
+                    class="btn btn-success"
+                    @click="buyStock"
+                    :disabled="insufficientFunds || quantity <= 0 || !Number.isInteger(quantity)">
+                        {{ insufficientFunds ? 'Insufficient Funds' : 'Buy' }}
+                </button>
+            </div>
+            <div class="card-footer text-muted">
+                <small>(Price: {{ stock.price }})</small>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+    import * as types from '../../store/types';
+
     export default {
         props: ['stock'],
         data() {
@@ -52,7 +53,7 @@
                     stockPrice: this.stock.price,
                     quantity: this.quantity
                 };
-                this.$store.dispatch('buyStock', order);
+                this.$store.dispatch(types.ACTION_BUY_STOCKS, order);
                 this.quantity = 0;
             }
         }

@@ -43,10 +43,9 @@
                         :class="{ show: isDropdownOpen }"
                         aria-labelledby="navbarDropdown">
                             <router-link class="dropdown-item" to="/market">Trader</router-link>
+                            <div class="dropdown-divider"></div>
                             <router-link class="dropdown-item" to="/portfolio">Portfolio</router-link>
                             <router-link class="dropdown-item" to="/stocks">Stocks</router-link>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
                     </div>
                 </li>
                 <!-- <li class="nav-item">
