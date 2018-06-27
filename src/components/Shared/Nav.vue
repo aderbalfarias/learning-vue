@@ -25,18 +25,31 @@
                 <router-link class="nav-item" tag="li" to="/learn"><a class="nav-link">Learn</a></router-link>
                 <router-link class="nav-item" tag="li" to="/vuex"><a class="nav-link">Vuex</a></router-link>
                 <!-- <router-link class="nav-item" tag="li" to="/tree"><a class="nav-link">Tree</a></router-link> -->
-                <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <router-link class="dropdown-item" to="/testroute">Route</router-link>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                <li 
+                    class="nav-item dropdown" 
+                    :class="{ show: isDropdownOpen }"
+                    @click="isDropdownOpen = !isDropdownOpen">
+                        <a class="nav-link dropdown-toggle" 
+                            href="#" 
+                            id="navbarDropdown" 
+                            role="button" 
+                            data-toggle="dropdown" 
+                            aria-haspopup="true"
+                            aria-expanded="false">
+                                Market
+                        </a>
+                    <div 
+                        class="dropdown-menu" 
+                        :class="{ show: isDropdownOpen }"
+                        aria-labelledby="navbarDropdown">
+                            <router-link class="dropdown-item" to="/market">Trader</router-link>
+                            <router-link class="dropdown-item" to="/portfolio">Portfolio</router-link>
+                            <router-link class="dropdown-item" to="/stocks">Stocks</router-link>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
                     </div>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link disabled" href="#">Disabled</a>
                 </li> -->
             </ul>
@@ -49,14 +62,42 @@
 </template>
 
 <script>
+    import { mapActions } from 'vuex';
+
     export default {
         name: "Nav",
         data() {
             return {
-                msg: "Welcome to Your Vue.js App"
-            };
+                msg: "Welcome to Your Vue.js App",
+                isDropdownOpen: false
+            }
+        },
+        computed: {
+            funds() {
+                return this.$store.getters.funds;
+            }
+        },
+        methods: {
+            ...mapActions({
+                randomizeStocks: 'randomizeStocks',
+                fetchData: 'loadData'
+            }),
+            endDay() {
+                this.randomizeStocks();
+            },
+            saveData() {
+                const data = {
+                    funds: this.$store.getters.funds,
+                    stockPortfolio: this.$store.getters.stockPortfolio,
+                    stocks: this.$store.getters.stocks
+                };
+                this.$http.put('market.json', data);
+            },
+            loadData() {
+                this.fetchData();
+            }
         }
-    };
+    }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

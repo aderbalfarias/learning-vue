@@ -14,7 +14,7 @@
                         class="form-control"
                         placeholder="Quantity"
                         v-model="quantity"
-                        :class="{danger: insufficientFunds}">
+                        :class="{'border-danger': insufficientFunds}">
                 </div>
                 <div class="pull-right">
                     <button

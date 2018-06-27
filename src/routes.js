@@ -145,19 +145,19 @@ const VuexExample = resolve => {
 const Market = resolve => {
     require.ensure(['./components/Market/Index.vue'], () => {
         resolve(require('./components/Market/Index.vue'));
-    }, 'market');
+    });
 };
 
 const Stocks = resolve => {
     require.ensure(['./components/Market/Stocks.vue'], () => {
         resolve(require('./components/Market/Stocks.vue'));
-    }, 'market');
+    });
 };
 
 const Portfolio = resolve => {
     require.ensure(['./components/Market/Portfolio.vue'], () => {
         resolve(require('./components/Market/Portfolio.vue'));
-    }, 'market');
+    });
 };
 
 export const routes = [
