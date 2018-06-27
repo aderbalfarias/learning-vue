@@ -7,16 +7,10 @@
             <hr>
             <p>Your Funds: {{ funds | currency }}</p>
         </div>
-        <div class="row">
+        <div>
             <button @click="endDay" class="btn btn-primary mr-1">End Day</button>
             <button @click="saveData" class="btn btn-primary mr-1">Save Data</button>
             <button @click="loadData" class="btn btn-primary mr-1">Load Data</button>
-            <hr>
-            <div class="col-xs-12">
-                <transition name="slide" mode="out-in">
-                    <router-view></router-view>
-                </transition>
-            </div>
         </div>
     </div>
 </template>
@@ -52,7 +46,7 @@
                     stockPortfolio: this.$store.getters.stockPortfolio,
                     stocks: this.$store.getters.stocks
                 };
-                this.$http.put('data.json', data);
+                this.$http.put('market.json', data);
             },
             loadData() {
                 this.fetchData();
