@@ -51,7 +51,7 @@ const getters = {
             }
         });
     },
-    [types.FUNDS]: (state) => {
+    [types.FUNDS]: state => {
         return state.funds;
     }
 };

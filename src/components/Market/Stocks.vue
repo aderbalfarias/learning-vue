@@ -1,6 +1,8 @@
 <template>
     <div class="container">
-        <app-buy-stock v-for="(stock, index) in stocks" :stock="stock" :key="index"></app-buy-stock>
+        <div class="row">
+            <app-buy-stock v-for="(stock, index) in stocks" :stock="stock" :key="index"></app-buy-stock>
+        </div>
     </div>
 </template>
 
@@ -11,6 +13,9 @@
     export default {
         components: {
             appBuyStock: BuyStock
+        },
+        created() {
+            this.$store.dispatch(types.INIT_STOCKS);
         },
         computed: {
             stocks() {

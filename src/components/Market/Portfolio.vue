@@ -1,7 +1,12 @@
 <template>
     <div class="container">
-        <transition name="slide" mode="out-in">
-            <app-sell-stock v-for="(stock, index) in stocks" :stock="stock" :key="index"></app-sell-stock>
+        <transition name="slide" mode="out-in">            
+            <div v-if="Object.keys(stocks).length !== 0">
+                <app-sell-stock v-for="(stock, index) in stocks" :stock="stock" :key="index"></app-sell-stock>
+            </div>
+            <div v-else class="text-center">
+                <h3 class="text-info mt-2">There is no portfolios available</h3>
+            </div>
         </transition>
     </div>                
 </template>

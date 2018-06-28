@@ -21,11 +21,8 @@
 
     export default {
         data() {
-          return {
-          }
-        },
-        created() {
-            this.$store.dispatch(types.INIT_STOCKS);
+            return {
+            }
         },
         computed: {
             funds() {

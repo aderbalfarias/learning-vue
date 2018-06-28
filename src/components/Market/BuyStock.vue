@@ -1,11 +1,11 @@
 <template>
-    <div class="col-sm-6 col-md-4">
-        <div class="card text-center">
+    <div class="col-sm-6 col-md-4">        
+        <div class="card text-center mt-2">
             <div class="card-header">
                 {{ stock.name }}                    
             </div>
             <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
+                <h5 class="card-title">Quantity: {{ stock.quantity }}</h5>
                 <div class="card-text">
                     <input
                         type="number"
@@ -15,14 +15,14 @@
                         :class="{'border-danger': insufficientFunds}">
                 </div>
                 <button
-                    class="btn btn-success"
+                    class="btn btn-success mt-2"
                     @click="buyStock"
-                    :disabled="insufficientFunds || quantity <= 0 || !Number.isInteger(quantity)">
+                    :disabled="insufficientFunds || quantity <= 0">
                         {{ insufficientFunds ? 'Insufficient Funds' : 'Buy' }}
                 </button>
             </div>
             <div class="card-footer text-muted">
-                <small>(Price: {{ stock.price }})</small>
+                <small>Price: {{ stock.price }}</small>
             </div>
         </div>
     </div>

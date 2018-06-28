@@ -1,29 +1,28 @@
 <template>
-    <div class="col-sm-6 col-md-4">
-        <div class="panel panel-info">
-            <div class="panel-heading">
-                <h3 class="panel-title">
-                    {{ stock.name }}
-                    <small>(Price: {{ stock.price }} | Quantity: {{ stock.quantity }})</small>
-                </h3>
+    <div class="col-sm-6 col-md-4">        
+        <div class="card text-center mt-2">
+            <div class="card-header">
+                {{ stock.name }}                    
             </div>
-            <div class="panel-body">
-                <div class="pull-left">
+            <div class="card-body">
+                <h5 class="card-title">Quantity: {{ stock.quantity }}</h5>
+                <div class="card-text">
                     <input
                         type="number"
                         class="form-control"
                         placeholder="Quantity"
                         v-model="quantity"
-                        :class="{ 'border-danger': insufficientQuantity }">
+                        :class="{'border-danger': insufficientQuantity}">
                 </div>
-                <div class="pull-right">
-                    <button
-                        class="btn btn-success"
-                        @click="sellStock"
-                        :disabled="insufficientQuantity || quantity <= 0 || !Number.isInteger(quantity)">
-                            {{ insufficientQuantity ? 'Not enough' : 'Sell' }}
-                    </button>
-                </div>
+                <button
+                    class="btn btn-success mt-2"
+                    @click="buyStock"
+                    :disabled="insufficientQuantity || quantity <= 0 || !Number.isInteger(quantity)">
+                        {{ insufficientQuantity ? 'Not enough' : 'Sell' }}
+                </button>
+            </div>
+            <div class="card-footer text-muted">
+                <small>Price: {{ stock.price }}</small>
             </div>
         </div>
     </div>
@@ -41,9 +40,9 @@
             }
         },
         computed: {
-          insufficientQuantity() {
-              return this.quantity > this.stock.quantity;
-          }
+            insufficientQuantity() {
+                return this.quantity > this.stock.quantity;
+            }
         },
         methods: {
             ...mapActions({
