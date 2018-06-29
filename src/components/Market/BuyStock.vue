@@ -5,7 +5,7 @@
                 {{ stock.name }}                    
             </div>
             <div class="card-body">
-                <h5 class="card-title">Quantity: {{ stock.quantity }}</h5>
+                <h5 class="card-title">Quantity: {{ stock.id }}</h5>
                 <div class="card-text">
                     <input
                         type="number"
