@@ -5,7 +5,7 @@
                 {{ stock.name }}                    
             </div>
             <div class="card-body">
-                <h5 class="card-title">Quantity: {{ stock.id }}</h5>
+                <h5 class="card-title">Id: {{ stock.id }}</h5>
                 <div class="card-text">
                     <input
                         type="number"
@@ -35,7 +35,7 @@
         props: ['stock'],
         data() {
             return {
-                quantity: 0
+                quantity: integer(0)
             }
         },
         computed: {
@@ -53,6 +53,8 @@
                     stockPrice: this.stock.price,
                     quantity: this.quantity
                 };
+
+                console.log(order);
                 this.$store.dispatch(types.BUY_STOCKS, order);
                 this.quantity = 0;
             }
