@@ -35,7 +35,7 @@
         props: ['stock'],
         data() {
             return {
-                quantity: integer(0)
+                quantity: 0
             }
         },
         computed: {
