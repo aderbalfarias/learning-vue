@@ -8,6 +8,7 @@
             <p>Your Funds: {{ funds | currency }}</p>
         </div>
         <div>
+            <button @click="create" class="btn btn-primary mr-1">Inicialize</button>
             <button @click="endDay" class="btn btn-primary mr-1">End Day</button>
             <button @click="saveData" class="btn btn-primary mr-1">Save Data</button>
             <button @click="loadData" class="btn btn-primary mr-1">Load Data</button>
@@ -34,6 +35,9 @@
                 randomizeStocks: types.RANDOMIZE_STOCKS,
                 fetchData: types.MARKET_LOAD_DATA
             }),
+            create() {
+                this.$store.dispatch(types.INIT_STOCKS);
+            },
             endDay() {
                 this.randomizeStocks();
             },
