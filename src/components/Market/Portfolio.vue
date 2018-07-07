@@ -12,7 +12,7 @@
 </template>
 
 <script>
-    import {mapGetters} from 'vuex';
+    import { mapGetters } from 'vuex';
     import SellStock from './SellStock.vue';
     import * as types from '../../store/types';
 

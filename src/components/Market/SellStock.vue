@@ -16,8 +16,8 @@
                 </div>
                 <button
                     class="btn btn-success mt-2"
-                    @click="buyStock"
-                    :disabled="insufficientQuantity || quantity <= 0 || !Number.isInteger(quantity)">
+                    @click="sellStock"
+                    :disabled="insufficientQuantity || quantity <= 0">
                         {{ insufficientQuantity ? 'Not enough' : 'Sell' }}
                 </button>
             </div>

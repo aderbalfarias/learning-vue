@@ -14,9 +14,6 @@
         components: {
             appBuyStock: BuyStock
         },
-        // created() {
-        //     this.$store.dispatch(types.INIT_STOCKS);
-        // },
         computed: {
             stocks() {
                 return this.$store.getters[types.STOCKS];
