@@ -6,6 +6,7 @@
             </div>
             <div v-else class="text-center">
                 <h3 class="text-info mt-2">There is no portfolios available</h3>
+                <h3 class="text-info mt-2">You should intialize the trader and buy stock</h3>
             </div>
         </transition>
     </div>                
