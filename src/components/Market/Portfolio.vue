@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <transition name="slide" mode="out-in">            
-            <div v-if="Object.keys(stocks).length !== 0">
+            <div class="row" v-if="Object.keys(stocks).length !== 0">
                 <app-sell-stock v-for="(stock, index) in stocks" :stock="stock" :key="index"></app-sell-stock>
             </div>
             <div v-else class="text-center">

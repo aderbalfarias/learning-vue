@@ -1,9 +1,6 @@
 <template>
     <div class="container">
-        <div class="row">
-        </div>
-
-        <div v-if="Object.keys(stocks).length !== 0">
+        <div class="row" v-if="Object.keys(stocks).length !== 0">
             <app-buy-stock v-for="(stock, index) in stocks" :stock="stock" :key="index"></app-buy-stock>
         </div>
         <div v-else class="text-center">
