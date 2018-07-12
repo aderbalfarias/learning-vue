@@ -4,6 +4,7 @@ import Vue from 'vue';
 import App from './App';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
+import Vuelidate from 'vuelidate';
 import { routes } from './routes';
 import { store } from './store/store';
 
@@ -11,6 +12,7 @@ Vue.config.productionTip = false;
 
 Vue.use(VueResource);
 Vue.use(VueRouter);
+Vue.use(Vuelidate)
 
 Vue.http.options.root = 'https://vuedb-92a60.firebaseio.com/';
 
