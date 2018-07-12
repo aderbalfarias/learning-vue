@@ -139,9 +139,8 @@
                 v-model.number="age"
                 placeholder="Type the age">
             <div class="error" v-if="!$v.age.between">
-                Must be between {{$v.age.$params.between.min}} and {{$v.age.$params.between.max}}
-            </div>
-            <span tabindex="0">Blur to see changes</span>        
+                The value must be between {{$v.age.$params.between.min}} and {{$v.age.$params.between.max}}
+            </div>   
         </div>
     </section>
 </template>
