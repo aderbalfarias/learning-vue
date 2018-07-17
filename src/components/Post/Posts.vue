@@ -63,6 +63,3 @@
         }
     }
 </script>
-
-<style scoped>
-</style>
