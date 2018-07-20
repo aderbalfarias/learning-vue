@@ -12,7 +12,7 @@
                         class="form-control"
                         placeholder="Quantity"
                         v-model="quantity"
-                        :class="{'border-danger': insufficientQuantity}">
+                        :class="{ 'border-danger': insufficientQuantity }">
                 </div>
                 <button
                     class="btn btn-success mt-2"
