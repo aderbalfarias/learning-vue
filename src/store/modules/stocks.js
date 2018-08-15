@@ -11,7 +11,6 @@ const mutations = {
     },
     [types.MUTATE_RND_STOCKS]: (state) => {
         state.stocks.forEach(stock => {
-            //console.log(stock);
             stock.price = Math.round(stock.price * (1 + Math.random() - 0.5));
         });
     }

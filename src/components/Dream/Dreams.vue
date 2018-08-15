@@ -1,7 +1,8 @@
 <template>
     <div class="container">
         <section class="text-center">
-            <h1>am I here?</h1>
+            <h1>Am I here?</h1>
+            <h1>Is it a test?</h1>
         </section>
     </div>
 </template>

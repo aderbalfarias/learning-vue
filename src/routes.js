@@ -166,8 +166,7 @@ export const routes = [
         component: Home, 
         name: 'home',
         comments: {
-            default: Home,
-            // 'header-top': Nav
+            default: Home
         }
     },
     {
@@ -218,8 +217,7 @@ export const routes = [
     { 
         path: '/learn', 
         components: {
-            default: Learn,
-            //'header-bottom': Nav
+            default: Learn
         }, 
         children: [
             { path: '', component: LearnStart, name: 'learnStart' },
