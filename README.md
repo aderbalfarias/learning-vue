@@ -1,6 +1,6 @@
 # learningvue
 
-> A Vue.js project
+> A Vue.js project to implement what I have learned
 
 ## Build Setup
 
