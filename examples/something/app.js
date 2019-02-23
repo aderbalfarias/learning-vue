@@ -5,7 +5,7 @@ new Vue({
         message: '',
         checkedNames: []
     }
-});
+})
 
 var example1 = new Vue({
     el: '#example-1',
@@ -18,7 +18,7 @@ var example1 = new Vue({
             }
         ]
     }
-});
+})
 
 Vue.component('button-counter', {
     data: function () {
@@ -27,8 +27,8 @@ Vue.component('button-counter', {
         }
     },
     template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
-});
+})
 
 new Vue({ 
     el: '#components-demo' 
-});
+})
