@@ -142,6 +142,17 @@
                 The value must be between {{$v.age.$params.between.min}} and {{$v.age.$params.between.max}}
             </div>   
         </div>
+
+        <div>
+            <span v-bind:title="messageDate">
+                Hover your mouse over me for a few seconds to see my dynamically bound title!
+            </span>
+        </div> 
+
+        <div>
+            <p>{{ messageRev }}</p>
+            <button v-on:click="reverseMessage">Reverse Message</button>
+        </div> 
     </section>
 </template>
 
@@ -179,7 +190,9 @@
                 titleTest: 'Testing', 
                 testingFilters: 'What can I do?',
                 name: '',
-                age: 0      
+                age: 0,
+                messageDate: 'You loaded this page on ' + new Date().toLocaleString(),
+                messageRev: 'I want to revert it'                
             }
         },
         validations: {
@@ -202,7 +215,10 @@
             },
             destroy: function() {
                 this.$destroy();
-            }
+            },
+            reverseMessage: function () {
+                this.messageRev = this.messageRev.split('').reverse().join('')
+            }  
         },
         watch: {
             counter: function() {
