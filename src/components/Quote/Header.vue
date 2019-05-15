@@ -5,7 +5,7 @@
             <div class="progress">
                 <div class="progress-bar" role="progressbar" 
                     :style="{width: (quoteCount / maxQuotes) * 100 + '%'}">
-                    {{ quoteCount }} / {{ maxQuotes}}
+                        {{ quoteCount }} / {{ maxQuotes}}
                 </div>
             </div>
         </div>
