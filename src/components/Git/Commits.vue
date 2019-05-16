@@ -1,5 +1,38 @@
 <template>
-
+    <div>
+        <h1>Latest Commits to this repository</h1>
+        
+        <div v-for="(i, branch) in branches" :key="i">
+            <input type="radio"
+                :id="branch"
+                :value="branch"
+                name="branch"
+                v-model="currentBranch">
+            <label :for="branch">{{ branch }}</label>
+        </div>
+        
+        <p>AderbalFarias/learningvue@{{ currentBranch }}</p>
+        
+        <ul>
+            <li v-for="(i, record) in commits" :key="i">
+                <a :href="record.html_url" target="_blank" class="commit">
+                    {{ record.sha.slice(0, 7) }}
+                </a>
+                - <span class="message">
+                    {{ record.commit.message | truncate }}
+                </span>
+                <br>
+                by <span class="author">
+                    <a :href="record.author.html_url" target="_blank">
+                        {{ record.commit.author.name }}
+                    </a>
+                </span>
+                at <span class="date">
+                    {{ record.commit.author.date | formatDate }}
+                </span>
+            </li>
+        </ul>
+    </div>
 </template>
 
 <script>
