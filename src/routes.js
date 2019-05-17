@@ -160,6 +160,13 @@ const Portfolio = resolve => {
     });
 };
 
+const GitCommits = resolve => {
+    require.ensure(['./components/Git/Commits.vue'], () => {
+        resolve(require('./components/Git/Commits.vue'));
+    });
+};
+
+
 export const routes = [
     {
         path: '', 
@@ -245,6 +252,9 @@ export const routes = [
     },
     {
         path: '/portfolio', component: Portfolio
+    },
+    {
+        path: '/gitcommits', component: GitCommits
     },
     {   
         path: '/redirect-me', redirect: { name: 'home' } 

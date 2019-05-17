@@ -51,6 +51,7 @@
                 <!-- <li class="nav-item">
                     <a class="nav-link disabled" href="#">Disabled</a>
                 </li> -->
+                <router-link class="nav-item" tag="li" to="/gitcommits"><a class="nav-link">Git Commits</a></router-link>
             </ul>
             <!-- <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
