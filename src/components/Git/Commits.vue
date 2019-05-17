@@ -10,7 +10,7 @@
                 v-model="currentBranch">
             <label :for="branch">{{ branch }}</label>
         </div>
-        
+
         <p>AderbalFarias/learningvue@{{ currentBranch }}</p>
         
         <ul>
@@ -57,10 +57,10 @@
         filters: {
             truncate: function (v) {
             var newline = v.indexOf('\n')
-            return newline > 0 ? v.slice(0, newline) : v
+                return newline > 0 ? v.slice(0, newline) : v
             },
             formatDate: function (v) {
-            return v.replace(/T|Z/g, ' ')
+                return v.replace(/T|Z/g, ' ')
             }
         },
 
