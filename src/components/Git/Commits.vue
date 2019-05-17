@@ -16,7 +16,7 @@
         <ul>
             <li v-for="(record, i) in commits" :key="i">
                 <a :href="record.html_url" target="_blank" class="commit">
-                    {{ record.sha.slice(0, 7) }}
+                    {{ record.sha.slice(0, 100) }}
                 </a>
                 - <span class="message">
                     {{ record.commit.message | truncate }}
@@ -40,20 +40,19 @@
     var apiURL = 'https://api.github.com/repos/AderbalFarias/learningvue/commits?per_page=3&sha='
 
     export default {
-        data: {
-            branches: ['master', 'dev'],
-            currentBranch: 'master',
-            commits: null
+        data() {
+            return {
+                branches: ['master', 'dev', 'bugfix', 'features'],
+                currentBranch: 'master',
+                commits: null
+            }
         },
-
-        created: function () {
+        created () {
             this.fetchData()
         },
-
         watch: {
             currentBranch: 'fetchData'
         },
-
         filters: {
             truncate: function (v) {
             var newline = v.indexOf('\n')
@@ -63,7 +62,6 @@
                 return v.replace(/T|Z/g, ' ')
             }
         },
-
         methods: {
             fetchData: function () {
                 var xhr = new XMLHttpRequest()
