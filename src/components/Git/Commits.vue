@@ -2,7 +2,7 @@
     <div>
         <h1>Latest Commits to this repository</h1>
         
-        <div v-for="(i, branch) in branches" :key="i">
+        <div v-for="(branch, i) in branches" :key="i">
             <input type="radio"
                 :id="branch"
                 :value="branch"
@@ -14,7 +14,7 @@
         <p>AderbalFarias/learningvue@{{ currentBranch }}</p>
         
         <ul>
-            <li v-for="(i, record) in commits" :key="i">
+            <li v-for="(record, i) in commits" :key="i">
                 <a :href="record.html_url" target="_blank" class="commit">
                     {{ record.sha.slice(0, 7) }}
                 </a>
