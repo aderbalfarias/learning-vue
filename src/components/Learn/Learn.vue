@@ -1,9 +1,11 @@
 <template>
     <div class="container">
         <h1>The Learning Page</h1>
+        
         <hr>
         <button @click="navigateToHome" class="btn btn-primary">Go to Home</button>
         <hr>
+
         <transition name="slide" mode="out-in">
             <router-view></router-view>
         </transition>

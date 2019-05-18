@@ -18,7 +18,10 @@
                 <button class="btn btn-primary" @click="fetchData">Get Data</button>
                 <br><br>
                 <ul class="list-group">
-                    <li class="list-group-item" v-for="(u, i) in users" :key="i">{{ u.username }} - {{ u.email }}</li>
+                    <li class="list-group-item" 
+                        v-for="(u, i) in users" :key="i">
+                            {{ u.username }} - {{ u.email }}
+                    </li>
                 </ul>
             </div>
         </div>
