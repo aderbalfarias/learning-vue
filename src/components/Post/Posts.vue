@@ -2,14 +2,10 @@
     <div class="container">
         <div class="row mt-3">
             <div class="col-md-6 text-center">
-                <button class="btn btn-info" v-on:click="get">
-                    Test Get
-                </button>
+                <button class="btn btn-info" v-on:click="get">Test Get</button>
             </div>
             <div class="col-md-6 text-center">
-                <button class="btn btn-info" v-on:click="post">
-                    Test Post
-                </button>
+                <button class="btn btn-info" v-on:click="post">Test Post</button>
             </div>    
         </div>    
         <table class="table table-striped table-dark mt-3" v-if="formData.length" >

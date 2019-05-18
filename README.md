@@ -1,6 +1,8 @@
 # learningvue
 
-> A Vue.js project to implement what I have learned
+A Vue.js project to implement what I have learned
+
+> It has several vue.js functionalities
 
 ## Build Setup
 

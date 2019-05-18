@@ -4,13 +4,13 @@
             id="on"
             @click="switched(true)"
             :class="{active: value}">
-            On
+                On
         </div>
         <div
             id="off"
             @click="switched(false)"
             :class="{active: !value}">
-            Off
+                Off
         </div>
     </div>
 </template>
