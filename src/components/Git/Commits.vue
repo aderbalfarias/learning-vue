@@ -36,8 +36,8 @@
 </template>
 
 <script>
-
-    var apiURL = 'https://api.github.com/repos/AderbalFarias/learningvue/commits?per_page=3&sha='
+    var limitPerPage = 10;
+    var apiURL = 'https://api.github.com/repos/AderbalFarias/learningvue/commits?per_page=' + limitPerPage + '&sha=';
 
     export default {
         data() {
