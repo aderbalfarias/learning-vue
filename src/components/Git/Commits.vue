@@ -1,6 +1,6 @@
 <template>
     <div class="pt-1 pb-2 text-center">
-        <h1>Latest Commits to this repository</h1>
+        <h1>Latest Commits to learningvue repository</h1>
         
         <span class="pl-2" v-for="(branch, i) in branches" :key="i">
             <input type="radio"
