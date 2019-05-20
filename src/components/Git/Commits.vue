@@ -14,7 +14,7 @@
         <p>AderbalFarias/learningvue@{{ currentBranch }}</p>
         
         <ul class="list-group">
-            <li v-for="(record, i) in commits" :key="i">
+            <li class="" v-for="(record, i) in commits" :key="i">
                 <a :href="record.html_url" target="_blank" class="commit">
                     {{ record.sha.slice(0, 100) }}
                 </a>
