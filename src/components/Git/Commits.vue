@@ -1,6 +1,6 @@
 <template>
     <div class="pt-1 pb-2 text-center">
-        <h1>Latest Commits to this repository</h1>
+        <h1>Latest Commits to learningvue repository</h1>
         
         <span class="pl-2" v-for="(branch, i) in branches" :key="i">
             <input type="radio"
@@ -14,7 +14,7 @@
         <p>AderbalFarias/learningvue@{{ currentBranch }}</p>
         
         <ul class="list-group">
-            <li v-for="(record, i) in commits" :key="i">
+            <li class="" v-for="(record, i) in commits" :key="i">
                 <a :href="record.html_url" target="_blank" class="commit">
                     {{ record.sha.slice(0, 100) }}
                 </a>
@@ -36,8 +36,8 @@
 </template>
 
 <script>
-
-    var apiURL = 'https://api.github.com/repos/AderbalFarias/learningvue/commits?per_page=3&sha='
+    var limitPerPage = 10;
+    var apiURL = 'https://api.github.com/repos/AderbalFarias/learningvue/commits?per_page=' + limitPerPage + '&sha=';
 
     export default {
         data() {
