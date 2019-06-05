@@ -1,7 +1,28 @@
 <template>
-    <div class="pt-1 pb-2 text-center">
+    <div class="container pt-1 pb-2 text-center">
         <h1>Latest Commits to learningvue repository</h1>
-        
+      <div class="card-deck">  
+        <div class="card border-success mb-3" style="max-width: 18rem;">
+  <div class="card-header bg-transparent border-success">Header</div>
+  <div class="card-body text-success">
+    <h5 class="card-title">Success card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <div class="card-footer bg-transparent border-success">Footer</div>
+</div>
+
+
+        <div class="card border-success mb-3" style="max-width: 18rem;">
+  <div class="card-header bg-transparent border-success">Header</div>
+  <div class="card-body text-success">
+    <h5 class="card-title">Success card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <div class="card-footer bg-transparent border-success">Footer</div>
+</div>
+</div>
+
+
         <span class="pl-2" v-for="(branch, i) in branches" :key="i">
             <input type="radio"
                 :id="branch"
