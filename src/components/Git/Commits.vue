@@ -1,28 +1,7 @@
 <template>
     <div class="container pt-1 pb-2 text-center">
         <h1>Latest Commits to learningvue repository</h1>
-      <div class="card-deck">  
-        <div class="card border-success mb-3" style="max-width: 18rem;">
-  <div class="card-header bg-transparent border-success">Header</div>
-  <div class="card-body text-success">
-    <h5 class="card-title">Success card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-  <div class="card-footer bg-transparent border-success">Footer</div>
-</div>
-
-
-        <div class="card border-success mb-3" style="max-width: 18rem;">
-  <div class="card-header bg-transparent border-success">Header</div>
-  <div class="card-body text-success">
-    <h5 class="card-title">Success card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-  <div class="card-footer bg-transparent border-success">Footer</div>
-</div>
-</div>
-
-
+        
         <span class="pl-2" v-for="(branch, i) in branches" :key="i">
             <input type="radio"
                 :id="branch"
@@ -34,25 +13,22 @@
 
         <p>AderbalFarias/learningvue@{{ currentBranch }}</p>
         
-        <ul class="list-group">
-            <li class="" v-for="(record, i) in commits" :key="i">
-                <a :href="record.html_url" target="_blank" class="commit">
-                    {{ record.sha.slice(0, 100) }}
-                </a>
-                - <span class="message">
-                    {{ record.commit.message | truncate }}
-                </span>
-                <br>
-                by <span class="author">
-                    <a :href="record.author.html_url" target="_blank">
-                        {{ record.commit.author.name }}
-                    </a>
-                </span>
-                at <span class="date">
-                    {{ record.commit.author.date | formatDate }}
-                </span>
-            </li>
-        </ul>
+        <div class="card-columns">  
+            <div class="card text-center p-3" v-for="(record, i) in commits" :key="i">
+                <blockquote class="blockquote mb-0">
+                    <p>{{ record.sha.slice(0, 100) }}</p>
+                    <p>{{ record.commit.message | truncate }}</p>
+                    <footer class="blockquote-footer">
+                        <small>
+                            By {{ record.commit.author.name }} 
+                            <cite title="Source Title">
+                                at {{ record.commit.author.date | formatDate }}
+                            </cite>
+                        </small>
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
     </div>
 </template>
 
