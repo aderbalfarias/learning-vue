@@ -16,11 +16,17 @@
         <div class="card-columns">  
             <div class="card text-center p-3" v-for="(record, i) in commits" :key="i">
                 <blockquote class="blockquote mb-0">
-                    <p>{{ record.sha.slice(0, 100) }}</p>
+                    <p class="font-weight-bold">
+                        <a :href="record.html_url" target="_blank" class="commit">
+                            {{ record.sha.slice(0, 100) }}
+                        </a>
+                    </p>
                     <p>{{ record.commit.message | truncate }}</p>
                     <footer class="blockquote-footer">
-                        <small>
-                            By {{ record.commit.author.name }} 
+                        <small class="font-weight-bold">
+                            By <a :href="record.author.html_url" target="_blank">
+                                {{ record.commit.author.name }}
+                            </a>
                             <cite title="Source Title">
                                 at {{ record.commit.author.date | formatDate }}
                             </cite>
@@ -83,7 +89,7 @@
         line-height: 1.5em;
         margin-bottom: 20px;
     }
-    .author, .date {
-        font-weight: bold;
+    .blockquote p:first-child {
+        font-size: 0.7em;
     }
 </style>
