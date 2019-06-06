@@ -21,7 +21,9 @@
                             {{ record.sha.slice(0, 100) }}
                         </a>
                     </p>
-                    <p>{{ record.commit.message | truncate }}</p>
+                    <p>
+                        {{ record.commit.message | truncate }}
+                    </p>
                     <footer class="blockquote-footer">
                         <small class="font-weight-bold">
                             By <a :href="record.author.html_url" target="_blank">
