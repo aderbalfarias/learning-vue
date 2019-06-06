@@ -1,5 +1,5 @@
 <template>
-    <div class="pt-1 pb-2 text-center">
+    <div class="container pt-1 pb-2 text-center">
         <h1>Latest Commits to learningvue repository</h1>
         
         <span class="pl-2" v-for="(branch, i) in branches" :key="i">
@@ -13,25 +13,28 @@
 
         <p>AderbalFarias/learningvue@{{ currentBranch }}</p>
         
-        <ul class="list-group">
-            <li class="" v-for="(record, i) in commits" :key="i">
-                <a :href="record.html_url" target="_blank" class="commit">
-                    {{ record.sha.slice(0, 100) }}
-                </a>
-                - <span class="message">
-                    {{ record.commit.message | truncate }}
-                </span>
-                <br>
-                by <span class="author">
-                    <a :href="record.author.html_url" target="_blank">
-                        {{ record.commit.author.name }}
-                    </a>
-                </span>
-                at <span class="date">
-                    {{ record.commit.author.date | formatDate }}
-                </span>
-            </li>
-        </ul>
+        <div class="card-columns">  
+            <div class="card text-center p-3" v-for="(record, i) in commits" :key="i">
+                <blockquote class="blockquote mb-0">
+                    <p class="font-weight-bold">
+                        <a :href="record.html_url" target="_blank" class="commit">
+                            {{ record.sha.slice(0, 100) }}
+                        </a>
+                    </p>
+                    <p>{{ record.commit.message | truncate }}</p>
+                    <footer class="blockquote-footer">
+                        <small class="font-weight-bold">
+                            By <a :href="record.author.html_url" target="_blank">
+                                {{ record.commit.author.name }}
+                            </a>
+                            <cite title="Source Title">
+                                at {{ record.commit.author.date | formatDate }}
+                            </cite>
+                        </small>
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -86,7 +89,7 @@
         line-height: 1.5em;
         margin-bottom: 20px;
     }
-    .author, .date {
-        font-weight: bold;
+    .blockquote p:first-child {
+        font-size: 0.7em;
     }
 </style>
