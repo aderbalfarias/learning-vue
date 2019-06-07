@@ -14,7 +14,7 @@
         <p>AderbalFarias/learningvue@{{ currentBranch }}</p>
         
         <div class="card-columns">  
-            <div class="card text-center p-3" v-for="(record, i) in commits" :key="i">
+            <div class="card border-dark text-center pt-2 pb-2 pl-1 pr-1" v-for="(record, i) in commits" :key="i">
                 <blockquote class="blockquote mb-0">
                     <p class="font-weight-bold">
                         <a :href="record.html_url" target="_blank" class="commit">

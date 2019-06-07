@@ -22,9 +22,9 @@ import Home from './components/Home/Home.vue';
 // import GetAndPost from './components/GetAndPost/Index.vue';
 
 // It allows to use lazy load concept, it will only load when called
-const Posts = resolve => {
-    require.ensure(['./components/Post/Posts.vue'], () => {
-        resolve(require('./components/Post/Posts.vue'));
+const GitCommits = resolve => {
+    require.ensure(['./components/Git/Commits.vue'], () => {
+        resolve(require('./components/Git/Commits.vue'));
     });
 };
 
@@ -160,9 +160,9 @@ const Portfolio = resolve => {
     });
 };
 
-const GitCommits = resolve => {
-    require.ensure(['./components/Git/Commits.vue'], () => {
-        resolve(require('./components/Git/Commits.vue'));
+const Posts = resolve => {
+    require.ensure(['./components/Post/Posts.vue'], () => {
+        resolve(require('./components/Post/Posts.vue'));
     });
 };
 
@@ -177,7 +177,7 @@ export const routes = [
         }
     },
     {
-        path: '/posts', component: Posts
+        path: '/gitcommits', component: GitCommits
     },
     {
         path: '/testroute', component: TestRoute
@@ -254,7 +254,7 @@ export const routes = [
         path: '/portfolio', component: Portfolio
     },
     {
-        path: '/gitcommits', component: GitCommits
+        path: '/posts', component: Posts
     },
     {   
         path: '/redirect-me', redirect: { name: 'home' } 
