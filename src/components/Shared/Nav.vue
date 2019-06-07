@@ -15,7 +15,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <router-link class="nav-item" tag="li" to="/"><a class="nav-link">Home</a></router-link>
-                <router-link class="nav-item" tag="li" to="/posts"><a class="nav-link">Posts</a></router-link>
+                <router-link class="nav-item" tag="li" to="/gitcommits"><a class="nav-link">Git Commits</a></router-link>
                 <router-link class="nav-item" tag="li" to="/search"><a class="nav-link">Search</a></router-link>
                 <router-link class="nav-item" tag="li" to="/basicexamples"><a class="nav-link">Basic Examples</a></router-link>
                 <router-link class="nav-item" tag="li" to="/game"><a class="nav-link">Game</a></router-link>
@@ -57,7 +57,7 @@
                 <!-- <li class="nav-item">
                     <a class="nav-link disabled" href="#">Disabled</a>
                 </li> -->
-                <router-link class="nav-item" tag="li" to="/gitcommits"><a class="nav-link">Git Commits</a></router-link>
+                <router-link class="nav-item" tag="li" to="/posts"><a class="nav-link">Posts</a></router-link>
             </ul>
             <!-- <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
