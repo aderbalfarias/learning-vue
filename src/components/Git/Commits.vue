@@ -87,10 +87,6 @@
         text-decoration: none;
         color: #f66;
     }
-    li {
-        line-height: 1.5em;
-        margin-bottom: 20px;
-    }
     .blockquote p:first-child {
         font-size: 0.7em;
     }
