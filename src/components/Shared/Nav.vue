@@ -32,8 +32,7 @@
                 <router-link class="nav-item" tag="li" to="/vuex"><a class="nav-link">Vuex</a></router-link>
                 <!-- <router-link class="nav-item" tag="li" to="/tree"><a class="nav-link">Tree</a></router-link> -->
                 <li 
-                    class="nav-item dropdown" 
-                    :class="{ show: isMarketOpen }"
+                    class="nav-item dropdown" :class="{ show: isMarketOpen }"
                     @click="isMarketOpen = !isMarketOpen">
                         <a class="nav-link dropdown-toggle" 
                             href="#" 
@@ -45,8 +44,7 @@
                                 Market
                         </a>
                     <div 
-                        class="dropdown-menu" 
-                        :class="{ show: isMarketOpen }"
+                        class="dropdown-menu" :class="{ show: isMarketOpen }"
                         aria-labelledby="navbarDropdown">
                             <router-link class="dropdown-item" to="/market">Trader</router-link>
                             <div class="dropdown-divider"></div>
