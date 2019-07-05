@@ -88,6 +88,6 @@
         color: #f66;
     }
     .blockquote p:first-child {
-        font-size: 0.7em;
+        font-size: 0.8em;
     }
 </style>
