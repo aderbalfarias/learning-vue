@@ -3,6 +3,7 @@
         <section class="text-center">
             <h1>Am I here?</h1>
             <h1>Is it a test?</h1>
+            <h2>test()</h2>
         </section>
     </div>
 </template>
@@ -16,7 +17,10 @@
             }
         },
         methods: {
-            
+            test: function() {
+                var situation = "dreaming"
+                return situation;
+            }
         }
     }
 </script>
