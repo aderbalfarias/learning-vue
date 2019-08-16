@@ -10,22 +10,21 @@
 </template>
 
 <script>
-import func from '../../../vue-temp/vue-editor-bridge';
-    export default {
-        name: 'Dreams',
-        situation = "dreaming",
-        data() {
-            return {
-                list: []
-            }
+export default {        
+    data() {
+        return {
+            name: 'Dreams',
+            situation: "dreaming",
+            list: []
+        }
+    },
+    methods: {
+        test: function() {
+            return situation;
         },
-        methods: {
-            test: function() {
-                return situation;
-            },
-            getUp: function() {
-                situation = "I am awaken";
-            }
+        getUp: function() {
+            situation = "I am awaken";
         }
     }
+}
 </script>
